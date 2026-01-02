@@ -8,7 +8,7 @@ const metrics = [
   },
   {
     number: "8",
-    title: "Project Wins",
+    title: "BDD Projects Wins",
     micro: "Achieved #1 results in cohort*",
   },
   {
@@ -17,7 +17,7 @@ const metrics = [
     micro: "Presented insights to executives*",
   },
   {
-    number: "9",
+    number: "10",
     title: "Enterprises Served",
     micro: "Delivered analyses across diverse industries*",
   },
@@ -76,19 +76,19 @@ const ImpactAtAGlance = () => {
           </div>
 
           {/* Asterisk Explanation */}
-          <p className="text-sm text-muted-foreground italic text-center max-w-3xl mx-auto mb-12">
+          <p className="text-sm text-muted-foreground italic text-center max-w-3xl mx-auto mb-8">
             *Business Deep Dives (BDD) are 3-week intensive projects organized by the school in collaboration with enterprises. Teams rotate, perform quantitative analyses, develop actionable strategies, and present insights to C-level executives. Each metric above relates to these BDD projects unless specified otherwise.
           </p>
 
-          {/* Navigation Arrow */}
-          <div className="flex flex-col items-center">
+          {/* Navigation Arrow - More visible */}
+          <div className="flex flex-col items-center pt-4">
             <button
               onClick={scrollToNext}
-              className="group flex flex-col items-center text-muted-foreground hover:text-accent transition-colors"
+              className="group flex flex-col items-center text-accent/70 hover:text-accent transition-colors"
               aria-label="Scroll to next section"
             >
-              <ArrowDown className="h-6 w-6 animate-bounce" />
-              <span className="text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity hidden md:block">
+              <ArrowDown className="h-8 w-8 animate-bounce" />
+              <span className="text-sm mt-2 text-muted-foreground group-hover:text-accent transition-colors hidden md:block">
                 Discover how I think
               </span>
             </button>

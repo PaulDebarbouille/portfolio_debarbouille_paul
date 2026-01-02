@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Download } from "lucide-react";
+import { ArrowDown } from "lucide-react";
 
 const Hero = () => {
   const scrollToImpact = () => {
@@ -23,21 +23,26 @@ const Hero = () => {
             </span>
           </div>
 
-          {/* Spike Statement */}
-          <h1 className="animate-fade-up stagger-1 text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
-            I'm the guy who worked for{" "}
-            <span className="text-accent">10 companies</span>{" "}
-            before turning 20.
+          {/* Name */}
+          <h1 className="animate-fade-up stagger-1 text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground">
+            Paul DEBARBOUILLE
           </h1>
 
+          {/* Spike Statement */}
+          <p className="animate-fade-up stagger-2 text-2xl md:text-3xl lg:text-4xl font-semibold text-primary-foreground/90 leading-tight">
+            I worked for{" "}
+            <span className="text-accent">10 companies</span>{" "}
+            before turning 20.
+          </p>
+
           {/* Subtitle / Context */}
-          <p className="animate-fade-up stagger-2 text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="animate-fade-up stagger-3 text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto leading-relaxed">
             Delivered 12 business deep dives, led cross-functional teams, 
             and pitched insights to C-level executives.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="animate-fade-up stagger-3 flex flex-col sm:flex-row gap-4 justify-center pt-4">
+          {/* CTA Button - Centered */}
+          <div className="animate-fade-up stagger-4 flex justify-center pt-4">
             <Button 
               size="lg" 
               onClick={scrollToImpact}
@@ -46,28 +51,6 @@ const Hero = () => {
               Discover My Impact
               <ArrowDown className="ml-2 h-5 w-5" />
             </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold px-8 py-6 text-lg"
-            >
-              <Download className="mr-2 h-5 w-5" />
-              Download CV
-            </Button>
-          </div>
-
-          {/* Scroll indicator */}
-          <div className="animate-fade-up stagger-4 pt-12">
-            <button 
-              onClick={scrollToImpact}
-              className="group flex flex-col items-center text-primary-foreground/60 hover:text-accent transition-colors"
-              aria-label="Scroll to content"
-            >
-              <ArrowDown className="h-6 w-6 animate-bounce" />
-              <span className="text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity hidden md:block">
-                Scroll down to discover my impact
-              </span>
-            </button>
           </div>
         </div>
       </div>
