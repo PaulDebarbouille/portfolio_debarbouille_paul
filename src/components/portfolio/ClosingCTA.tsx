@@ -3,29 +3,35 @@ import { Download, Mail, Linkedin, Github } from "lucide-react";
 
 const ClosingCTA = () => {
   return (
-    <section id="closing" className="aws-section aws-gradient">
+    <section id="closing" className="min-h-screen flex flex-col items-center justify-center aws-gradient">
       <div className="aws-container">
-        <div className="max-w-3xl mx-auto text-center">
-          {/* Main CTA Phrase */}
-          <p className="text-2xl md:text-3xl lg:text-4xl font-medium text-primary-foreground leading-relaxed mb-12">
-            <span className="text-accent font-bold">10 companies before 20</span>{" "}
-            — now, let the first one after 20 be yours.
-          </p>
+        <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center space-y-12">
+          {/* Main CTA Phrase - Split into two lines */}
+          <div className="space-y-4">
+            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight">
+              <span className="text-accent">10 companies before 20</span>
+            </p>
+            <p className="text-2xl md:text-3xl lg:text-4xl text-primary-foreground/90 italic leading-relaxed">
+              — now, let the first one after 20 be yours.
+            </p>
+          </div>
 
-          {/* CV Download */}
-          <Button 
-            size="lg" 
-            className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-10 py-6 text-lg mb-10"
-          >
-            <Download className="mr-2 h-5 w-5" />
-            Télécharger mon CV
-          </Button>
+          {/* CTA Buttons - Centered with spacing */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-8">
+            <Button 
+              size="lg" 
+              className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-10 py-6 text-lg"
+            >
+              <Download className="mr-2 h-5 w-5" />
+              Télécharger mon CV
+            </Button>
+          </div>
 
-          {/* Contact Links */}
-          <div className="flex flex-wrap justify-center gap-6">
+          {/* Contact Links - Centered */}
+          <div className="flex flex-wrap justify-center gap-8 pt-4">
             <a 
               href="mailto:votre.email@example.com" 
-              className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
+              className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors text-lg"
             >
               <Mail className="h-5 w-5" />
               <span>votre.email@example.com</span>
@@ -34,7 +40,7 @@ const ClosingCTA = () => {
               href="https://linkedin.com/in/votre-profil" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
+              className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors text-lg"
             >
               <Linkedin className="h-5 w-5" />
               <span>LinkedIn</span>
@@ -43,7 +49,7 @@ const ClosingCTA = () => {
               href="https://github.com/votre-profil" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors"
+              className="flex items-center gap-2 text-primary-foreground/80 hover:text-accent transition-colors text-lg"
             >
               <Github className="h-5 w-5" />
               <span>GitHub</span>
@@ -53,7 +59,7 @@ const ClosingCTA = () => {
       </div>
 
       {/* Footer */}
-      <footer className="mt-16 pt-8 border-t border-primary-foreground/20">
+      <footer className="absolute bottom-0 w-full py-6">
         <div className="aws-container">
           <p className="text-center text-sm text-primary-foreground/60">
             © 2024 Paul DEBARBOUILLE — Portfolio Business Analyst
