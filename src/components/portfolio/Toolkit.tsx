@@ -6,7 +6,8 @@ import {
   Code,
   PieChart,
   Presentation,
-  FileText
+  FileText,
+  ArrowDown
 } from "lucide-react";
 
 const categories = [
@@ -46,8 +47,12 @@ const categories = [
 ];
 
 const Toolkit = () => {
+  const scrollToNext = () => {
+    document.getElementById("closing")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section className="aws-section bg-secondary/30">
+    <section id="toolkit" className="aws-section bg-secondary/30">
       <div className="aws-container">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -98,6 +103,17 @@ const Toolkit = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Navigation Arrow */}
+        <div className="flex flex-col items-center pt-12">
+          <button
+            onClick={scrollToNext}
+            className="group flex flex-col items-center text-muted-foreground hover:text-accent transition-colors"
+            aria-label="Scroll to closing"
+          >
+            <ArrowDown className="h-6 w-6 animate-bounce" />
+          </button>
         </div>
       </div>
     </section>

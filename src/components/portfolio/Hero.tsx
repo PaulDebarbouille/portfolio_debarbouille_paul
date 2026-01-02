@@ -2,8 +2,8 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown, Download } from "lucide-react";
 
 const Hero = () => {
-  const scrollToProjects = () => {
-    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  const scrollToImpact = () => {
+    document.getElementById("impact")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -23,27 +23,27 @@ const Hero = () => {
             </span>
           </div>
 
-          {/* Name */}
-          <h1 className="animate-fade-up stagger-1 text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground">
-            [Votre Nom]
+          {/* Spike Statement */}
+          <h1 className="animate-fade-up stagger-1 text-3xl md:text-5xl lg:text-6xl font-bold text-primary-foreground leading-tight">
+            I'm the guy who worked for{" "}
+            <span className="text-accent">10 companies</span>{" "}
+            before turning 20.
           </h1>
 
-          {/* Tagline */}
-          <p className="animate-fade-up stagger-2 text-lg md:text-xl lg:text-2xl text-primary-foreground/80 max-w-3xl mx-auto leading-relaxed">
-            Completed <span className="text-accent font-semibold">12 data-driven projects</span> across multiple enterprises, 
-            winning <span className="text-accent font-semibold">8 of them</span> and achieving 
-            <span className="text-accent font-semibold"> top academic performance</span> (major de promo), 
-            delivering insights, leading teams, and driving business impact.
+          {/* Subtitle / Context */}
+          <p className="animate-fade-up stagger-2 text-lg md:text-xl text-primary-foreground/80 max-w-3xl mx-auto leading-relaxed">
+            Delivered 12 business deep dives, led cross-functional teams, 
+            and pitched insights to C-level executives.
           </p>
 
           {/* CTA Buttons */}
           <div className="animate-fade-up stagger-3 flex flex-col sm:flex-row gap-4 justify-center pt-4">
             <Button 
               size="lg" 
-              onClick={scrollToProjects}
+              onClick={scrollToImpact}
               className="bg-accent text-accent-foreground hover:bg-accent/90 font-semibold px-8 py-6 text-lg"
             >
-              Voir mes Use Cases
+              Discover My Impact
               <ArrowDown className="ml-2 h-5 w-5" />
             </Button>
             <Button 
@@ -52,18 +52,21 @@ const Hero = () => {
               className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 font-semibold px-8 py-6 text-lg"
             >
               <Download className="mr-2 h-5 w-5" />
-              Télécharger mon CV
+              Download CV
             </Button>
           </div>
 
           {/* Scroll indicator */}
           <div className="animate-fade-up stagger-4 pt-12">
             <button 
-              onClick={scrollToProjects}
-              className="text-primary-foreground/60 hover:text-accent transition-colors"
+              onClick={scrollToImpact}
+              className="group flex flex-col items-center text-primary-foreground/60 hover:text-accent transition-colors"
               aria-label="Scroll to content"
             >
               <ArrowDown className="h-6 w-6 animate-bounce" />
+              <span className="text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity hidden md:block">
+                Scroll down to discover my impact
+              </span>
             </button>
           </div>
         </div>
