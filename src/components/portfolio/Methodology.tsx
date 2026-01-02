@@ -3,7 +3,8 @@ import {
   Target, 
   Search, 
   Scale, 
-  Rocket 
+  Rocket,
+  ArrowDown
 } from "lucide-react";
 
 const steps = [
@@ -40,8 +41,12 @@ const steps = [
 ];
 
 const Methodology = () => {
+  const scrollToNext = () => {
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <section className="aws-section bg-background">
+    <section id="methodology" className="aws-section bg-background">
       <div className="aws-container">
         {/* Section Header */}
         <div className="text-center mb-16">
@@ -87,6 +92,20 @@ const Methodology = () => {
               );
             })}
           </div>
+        </div>
+
+        {/* Navigation Arrow */}
+        <div className="flex flex-col items-center pt-12">
+          <button
+            onClick={scrollToNext}
+            className="group flex flex-col items-center text-muted-foreground hover:text-accent transition-colors"
+            aria-label="Scroll to projects"
+          >
+            <ArrowDown className="h-6 w-6 animate-bounce" />
+            <span className="text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity hidden md:block">
+              Explore my use cases
+            </span>
+          </button>
         </div>
       </div>
     </section>

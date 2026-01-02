@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Trophy, Briefcase, Building2 } from "lucide-react";
+import { Trophy, Briefcase, Building2, ArrowDown } from "lucide-react";
 import { projects, Project } from "@/data/projects";
 import ProjectModal from "./ProjectModal";
 
@@ -14,6 +14,10 @@ const ProjectsGrid = () => {
   const handleProjectClick = (project: Project) => {
     setSelectedProject(project);
     setModalOpen(true);
+  };
+
+  const scrollToNext = () => {
+    document.getElementById("toolkit")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -103,6 +107,20 @@ const ProjectsGrid = () => {
               </div>
             );
           })}
+        </div>
+
+        {/* Navigation Arrow */}
+        <div className="flex flex-col items-center pt-12">
+          <button
+            onClick={scrollToNext}
+            className="group flex flex-col items-center text-muted-foreground hover:text-accent transition-colors"
+            aria-label="Scroll to toolkit"
+          >
+            <ArrowDown className="h-6 w-6 animate-bounce" />
+            <span className="text-xs mt-2 opacity-0 group-hover:opacity-100 transition-opacity hidden md:block">
+              Discover my toolkit
+            </span>
+          </button>
         </div>
       </div>
 
