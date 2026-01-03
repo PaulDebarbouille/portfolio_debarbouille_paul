@@ -5,6 +5,7 @@ export interface Project {
   sector: string;
   isWinner: boolean;
   isInternship: boolean;
+  isPrimary: boolean;
   shortDescription: string;
   situation: string;
   task: string;
@@ -12,6 +13,10 @@ export interface Project {
   results: string[];
   tools: string[];
   principles: string[];
+  logo?: string;
+  data?: string;
+  mission?: string;
+  result?: string;
 }
 
 export const projects: Project[] = [
@@ -22,6 +27,7 @@ export const projects: Project[] = [
     sector: "Consumer Goods",
     isWinner: true,
     isInternship: false,
+    isPrimary: true,
     shortDescription: "Optimisation du portefeuille produits grills pour maximiser les ventes et réduire la complexité.",
     situation: "[PLACEHOLDER] L'entreprise SEB faisait face à un portefeuille de produits grills trop large, créant de la confusion client et des coûts de gestion élevés.",
     task: "[PLACEHOLDER] Analyser les performances des SKUs et recommander une rationalisation du portefeuille tout en maintenant le chiffre d'affaires.",
@@ -46,6 +52,7 @@ export const projects: Project[] = [
     sector: "Logistics",
     isWinner: true,
     isInternship: false,
+    isPrimary: true,
     shortDescription: "[PLACEHOLDER] Optimisation des flux logistiques pour réduire les coûts et délais de livraison.",
     situation: "[PLACEHOLDER] Contexte de l'entreprise et problématique rencontrée.",
     task: "[PLACEHOLDER] Objectif concret et mesurable du projet.",
@@ -68,6 +75,7 @@ export const projects: Project[] = [
     sector: "Retail",
     isWinner: true,
     isInternship: false,
+    isPrimary: true,
     shortDescription: "[PLACEHOLDER] Segmentation client pour personnaliser les offres marketing.",
     situation: "[PLACEHOLDER] Contexte de l'entreprise et problématique rencontrée.",
     task: "[PLACEHOLDER] Objectif concret et mesurable du projet.",
@@ -90,6 +98,7 @@ export const projects: Project[] = [
     sector: "E-commerce",
     isWinner: true,
     isInternship: false,
+    isPrimary: true,
     shortDescription: "[PLACEHOLDER] Analyse de la stratégie pricing pour optimiser les marges.",
     situation: "[PLACEHOLDER] Contexte de l'entreprise et problématique rencontrée.",
     task: "[PLACEHOLDER] Objectif concret et mesurable du projet.",
@@ -112,6 +121,7 @@ export const projects: Project[] = [
     sector: "Tech",
     isWinner: true,
     isInternship: false,
+    isPrimary: true,
     shortDescription: "[PLACEHOLDER] Étude de marché pour identifier les opportunités d'expansion.",
     situation: "[PLACEHOLDER] Contexte de l'entreprise et problématique rencontrée.",
     task: "[PLACEHOLDER] Objectif concret et mesurable du projet.",
@@ -134,6 +144,7 @@ export const projects: Project[] = [
     sector: "Finance",
     isWinner: true,
     isInternship: false,
+    isPrimary: true,
     shortDescription: "[PLACEHOLDER] Automatisation des processus manuels pour gagner en efficacité.",
     situation: "[PLACEHOLDER] Contexte de l'entreprise et problématique rencontrée.",
     task: "[PLACEHOLDER] Objectif concret et mesurable du projet.",
@@ -154,8 +165,9 @@ export const projects: Project[] = [
     title: "KPI Dashboard Development",
     company: "Entreprise G",
     sector: "Manufacturing",
-    isWinner: true,
+    isWinner: false,
     isInternship: false,
+    isPrimary: false,
     shortDescription: "[PLACEHOLDER] Création d'un dashboard de suivi des KPIs opérationnels.",
     situation: "[PLACEHOLDER] Contexte de l'entreprise et problématique rencontrée.",
     task: "[PLACEHOLDER] Objectif concret et mesurable du projet.",
@@ -170,14 +182,18 @@ export const projects: Project[] = [
     ],
     tools: ["Excel", "PowerPoint", "SQL"],
     principles: ["Dive Deep", "Deliver Results", "Earn Trust"],
+    data: "Données opérationnelles",
+    mission: "Dashboard KPIs",
+    result: "-30% temps reporting",
   },
   {
     id: "8",
     title: "Cost Reduction Initiative",
     company: "Entreprise H",
     sector: "Healthcare",
-    isWinner: true,
+    isWinner: false,
     isInternship: false,
+    isPrimary: false,
     shortDescription: "[PLACEHOLDER] Identification des leviers de réduction des coûts opérationnels.",
     situation: "[PLACEHOLDER] Contexte de l'entreprise et problématique rencontrée.",
     task: "[PLACEHOLDER] Objectif concret et mesurable du projet.",
@@ -192,6 +208,9 @@ export const projects: Project[] = [
     ],
     tools: ["Excel", "SQL", "Python"],
     principles: ["Ownership", "Dive Deep", "Deliver Results"],
+    data: "Coûts opérationnels",
+    mission: "Optimisation OPEX",
+    result: "-15% coûts",
   },
   {
     id: "9",
@@ -200,6 +219,7 @@ export const projects: Project[] = [
     sector: "Consumer Goods",
     isWinner: false,
     isInternship: false,
+    isPrimary: false,
     shortDescription: "[PLACEHOLDER] Analyse des performances commerciales par région et canal.",
     situation: "[PLACEHOLDER] Contexte de l'entreprise et problématique rencontrée.",
     task: "[PLACEHOLDER] Objectif concret et mesurable du projet.",
@@ -214,6 +234,9 @@ export const projects: Project[] = [
     ],
     tools: ["Excel", "PowerPoint"],
     principles: ["Dive Deep", "Earn Trust"],
+    data: "Ventes multicanal",
+    mission: "Analyse perf. commerciale",
+    result: "+8% conversion",
   },
   {
     id: "10",
@@ -222,6 +245,7 @@ export const projects: Project[] = [
     sector: "Services",
     isWinner: false,
     isInternship: false,
+    isPrimary: false,
     shortDescription: "[PLACEHOLDER] Définition de la feuille de route de transformation digitale.",
     situation: "[PLACEHOLDER] Contexte de l'entreprise et problématique rencontrée.",
     task: "[PLACEHOLDER] Objectif concret et mesurable du projet.",
@@ -236,6 +260,9 @@ export const projects: Project[] = [
     ],
     tools: ["PowerPoint", "Excel"],
     principles: ["Think Big", "Ownership"],
+    data: "Processus métier",
+    mission: "Roadmap digitale",
+    result: "5 initiatives lancées",
   },
   {
     id: "11",
@@ -244,6 +271,7 @@ export const projects: Project[] = [
     sector: "Retail",
     isWinner: false,
     isInternship: false,
+    isPrimary: false,
     shortDescription: "[PLACEHOLDER] Optimisation des niveaux de stock pour réduire les ruptures.",
     situation: "[PLACEHOLDER] Contexte de l'entreprise et problématique rencontrée.",
     task: "[PLACEHOLDER] Objectif concret et mesurable du projet.",
@@ -258,6 +286,9 @@ export const projects: Project[] = [
     ],
     tools: ["Excel", "SQL"],
     principles: ["Dive Deep", "Deliver Results"],
+    data: "Stock & ruptures",
+    mission: "Optimisation inventaire",
+    result: "-40% ruptures",
   },
   {
     id: "12",
@@ -266,6 +297,7 @@ export const projects: Project[] = [
     sector: "Telecom",
     isWinner: false,
     isInternship: false,
+    isPrimary: false,
     shortDescription: "[PLACEHOLDER] Analyse NPS et identification des drivers de satisfaction.",
     situation: "[PLACEHOLDER] Contexte de l'entreprise et problématique rencontrée.",
     task: "[PLACEHOLDER] Objectif concret et mesurable du projet.",
@@ -280,6 +312,9 @@ export const projects: Project[] = [
     ],
     tools: ["Excel", "Python", "PowerPoint"],
     principles: ["Customer Obsession", "Earn Trust"],
+    data: "NPS & feedback",
+    mission: "Analyse satisfaction",
+    result: "+12 pts NPS",
   },
   {
     id: "internship",
@@ -288,6 +323,7 @@ export const projects: Project[] = [
     sector: "Consulting",
     isWinner: false,
     isInternship: true,
+    isPrimary: false,
     shortDescription: "[PLACEHOLDER] Stage de 6 mois en Business Analysis dans un cabinet de conseil.",
     situation: "[PLACEHOLDER] Contexte de l'entreprise et missions confiées durant le stage.",
     task: "[PLACEHOLDER] Objectifs principaux du stage et livrables attendus.",
@@ -304,5 +340,8 @@ export const projects: Project[] = [
     ],
     tools: ["Excel", "SQL", "Python", "PowerPoint"],
     principles: ["Customer Obsession", "Ownership", "Dive Deep", "Deliver Results", "Earn Trust"],
+    data: "Missions variées",
+    mission: "Business Analyst Intern",
+    result: "CDI proposé",
   },
 ];
