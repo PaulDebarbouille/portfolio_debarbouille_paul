@@ -7,11 +7,11 @@ const ClosingCTA = () => {
       <div className="aws-container">
         <div className="max-w-4xl mx-auto text-center flex flex-col items-center justify-center space-y-12">
           {/* Main CTA Phrase - Split into two lines */}
-          <div className="space-y-4">
-            <p className="text-3xl md:text-4xl lg:text-5xl font-bold text-primary-foreground leading-tight">
+          <div className="space-y-6">
+            <p className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight font-sans">
               <span className="text-accent">10 companies before 20</span>
             </p>
-            <p className="text-2xl md:text-3xl lg:text-4xl text-primary-foreground/90 italic leading-relaxed">
+            <p className="text-xl md:text-2xl lg:text-3xl text-primary-foreground/80 italic font-light leading-relaxed font-sans">
               — now, let the first one after 20 be yours.
             </p>
           </div>
