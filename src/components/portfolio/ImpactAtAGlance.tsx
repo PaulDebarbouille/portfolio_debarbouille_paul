@@ -39,12 +39,12 @@ const ImpactAtAGlance = () => {
   };
 
   return (
-    <section id="impact" className="aws-section bg-background">
+    <section id="impact" className="py-12 md:py-16 bg-background">
       <div className="aws-container">
         <div className="max-w-5xl mx-auto">
           {/* Section Header */}
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-3">
               Impact at a Glance
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -53,7 +53,7 @@ const ImpactAtAGlance = () => {
           </div>
 
           {/* Metrics Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6">
             {metrics.map((metric, index) => (
               <div
                 key={index}
@@ -76,12 +76,12 @@ const ImpactAtAGlance = () => {
           </div>
 
           {/* Asterisk Explanation */}
-          <p className="text-sm text-muted-foreground italic text-center max-w-3xl mx-auto mb-8">
+          <p className="text-sm text-muted-foreground italic text-center max-w-3xl mx-auto mb-4">
             *Business Deep Dives (BDD) are 3-week intensive projects organized by the school in collaboration with enterprises. Teams rotate, perform quantitative analyses, develop actionable strategies, and present insights to C-level executives. Each metric above relates to these BDD projects unless specified otherwise.
           </p>
 
           {/* Navigation Arrow - More visible */}
-          <div className="flex flex-col items-center pt-4">
+          <div className="flex flex-col items-center pt-2">
             <button
               onClick={scrollToNext}
               className="group flex flex-col items-center text-accent/70 hover:text-accent transition-colors"
