@@ -35,7 +35,7 @@ const metrics = [
 
 const ImpactAtAGlance = () => {
   const scrollToNext = () => {
-    document.getElementById("methodology")?.scrollIntoView({ behavior: "smooth" });
+    document.getElementById("projects")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -89,7 +89,7 @@ const ImpactAtAGlance = () => {
             >
               <ArrowDown className="h-8 w-8 animate-bounce" />
               <span className="text-sm mt-2 text-muted-foreground group-hover:text-accent transition-colors hidden md:block">
-                Discover how I think
+                Explore my use cases
               </span>
             </button>
           </div>
