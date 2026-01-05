@@ -1,283 +1,410 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Savencia - Analyse Performance Commerciale</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #ffffff;
-      color: #1a1a1a;
-      line-height: 1.6;
-      padding: 32px;
-    }
-    .card {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .header {
-      margin-bottom: 24px;
-    }
-    .category {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #666;
-      margin-bottom: 12px;
-    }
-    .impact-headline {
-      font-size: 28px;
-      font-weight: 700;
-      color: #1a1a1a;
-      margin-bottom: 8px;
-    }
-    .impact-highlight {
-      color: #ff9900;
-    }
-    .title {
-      font-size: 18px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 16px;
-    }
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      font-size: 13px;
-      color: #666;
-      margin-bottom: 24px;
-    }
-    .tech-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 24px;
-    }
-    .tech-badge {
-      display: inline-block;
-      padding: 4px 10px;
-      font-size: 11px;
-      font-weight: 500;
-      background: #f5f5f5;
-      border: 1px solid #e0e0e0;
-      border-radius: 4px;
-      color: #444;
-    }
-    .section {
-      margin-bottom: 24px;
-    }
-    .section-title {
-      font-size: 13px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #2d5f8d;
-      margin-bottom: 12px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #2d5f8d;
-    }
-    .section-content {
-      font-size: 14px;
-      color: #444;
-    }
-    .section-content p {
-      margin-bottom: 12px;
-    }
-    .impact-box {
-      background: #f8f8f8;
-      border: 2px solid #ff9900;
-      border-radius: 4px;
-      padding: 20px;
-      margin-bottom: 24px;
-    }
-    .impact-box .section-title {
-      color: #ff9900;
-      border-bottom-color: #ff9900;
-    }
-    .result-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-    .result-icon {
-      flex-shrink: 0;
-      width: 20px;
-      height: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      color: #ff9900;
-    }
-    .approach-list {
-      list-style: none;
-    }
-    .approach-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 12px;
-      font-size: 14px;
-      color: #444;
-    }
-    .approach-number {
-      flex-shrink: 0;
-      width: 24px;
-      height: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #2d5f8d;
-      color: white;
-      border-radius: 50%;
-      font-size: 12px;
-      font-weight: 600;
-    }
-    .nda-notice {
-      text-align: center;
-      font-size: 12px;
-      font-style: italic;
-      color: #888;
-      margin-top: 32px;
-      padding-top: 16px;
-      border-top: 1px solid #e0e0e0;
-    }
-    .feedback-box {
-      background: #fffbf0;
-      border-left: 3px solid #ff9900;
-      padding: 16px;
-      margin-top: 24px;
-      font-size: 14px;
-      font-style: italic;
-      color: #555;
-    }
-    .feedback-title {
-      font-weight: 600;
-      font-style: normal;
-      margin-bottom: 8px;
-      color: #333;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Portfolio - Analyse Performance Savencia</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background: #fafafa;
+            padding: 40px 20px;
+            line-height: 1.6;
+            color: #1a1a1a;
+        }
+
+        .project-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid #e5e5e5;
+            overflow: hidden;
+        }
+
+        .header {
+            padding: 48px 48px 32px 48px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .category {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #4a4a4a;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .category-icon {
+            width: 16px;
+            height: 16px;
+            opacity: 0.6;
+        }
+
+        .project-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .company-name {
+            color: #2d5f8d;
+        }
+
+        .impact-headline {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2d5f8d;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .meta-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            font-size: 14px;
+            color: #4a4a4a;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .badge {
+            background: white;
+            border: 1px solid #e5e5e5;
+            color: #4a4a4a;
+            padding: 4px 10px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .content {
+            padding: 48px;
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .section-title.highlight {
+            color: #ff9900;
+        }
+
+        .section-content {
+            color: #4a4a4a;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .section-content p {
+            margin-bottom: 12px;
+        }
+
+        .dataset-tag {
+            display: inline-block;
+            background: #f8f9fa;
+            border: 1px solid #e5e5e5;
+            padding: 8px 12px;
+            margin-top: 8px;
+            margin-right: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .results-box {
+            background: #f8f9fa;
+            border: 2px solid #ff9900;
+            padding: 24px;
+            margin-top: 16px;
+        }
+
+        .result-item {
+            margin-bottom: 20px;
+        }
+
+        .result-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .result-content strong {
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .result-content span {
+            font-size: 14px;
+            color: #4a4a4a;
+        }
+
+        .deliverable-note {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e5e5;
+            font-size: 14px;
+            color: #4a4a4a;
+        }
+
+        .deliverable-note strong {
+            color: #1a1a1a;
+        }
+
+        .feedback-box {
+            background: #fffbf0;
+            border-left: 3px solid #ff9900;
+            padding: 20px;
+            margin-top: 16px;
+            font-style: italic;
+            color: #4a4a4a;
+            line-height: 1.7;
+        }
+
+        .feedback-box p {
+            margin-bottom: 12px;
+        }
+
+        .feedback-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .approach-list {
+            list-style: none;
+            margin-top: 12px;
+        }
+
+        .approach-list li {
+            margin-bottom: 16px;
+            padding-left: 24px;
+            position: relative;
+            color: #4a4a4a;
+            font-size: 15px;
+        }
+
+        .approach-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #2d5f8d;
+            font-weight: 700;
+        }
+
+        .approach-list li strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .sub-list {
+            margin-top: 8px;
+            margin-left: 0;
+            list-style: none;
+        }
+
+        .sub-list li {
+            padding-left: 20px;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+
+        .sub-list li::before {
+            content: "·";
+            font-weight: 700;
+        }
+
+        .footer {
+            padding: 24px 48px;
+            background: #f8f9fa;
+            border-top: 1px solid #e5e5e5;
+            text-align: center;
+        }
+
+        .nda-note {
+            font-size: 14px;
+            color: #4a4a4a;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 32px 24px 24px 24px;
+            }
+
+            .impact-headline {
+                font-size: 24px;
+            }
+
+            .project-title {
+                font-size: 20px;
+            }
+
+            .content {
+                padding: 32px 24px;
+            }
+
+            .footer {
+                padding: 20px 24px;
+            }
+
+            .results-box {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="card">
-    <!-- Header -->
-    <div class="header">
-      <div class="category">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-        </svg>
-        Agroalimentaire
-      </div>
-      <div class="impact-headline">
-        <span class="impact-highlight">500K-1M€</span> gain potentiel identifié (IC 90%)
-      </div>
-      <div class="title">Analyse performance commerciale Savencia</div>
-    </div>
+    <article class="project-card">
+        <header class="header">
+            <div class="category">
+                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                    <path d="M2 17l10 5 10-5"></path>
+                    <path d="M2 12l10 5 10-5"></path>
+                </svg>
+                Agroalimentaire
+            </div>
 
-    <!-- Meta -->
-    <div class="meta">
-      <div class="meta-item">3 semaines</div>
-      <div class="meta-item">Équipe de 3</div>
-    </div>
+            <h1 class="project-title">Diagnostic performance commerciale <span class="company-name">Savencia</span> (Europe)</h1>
 
-    <!-- Tech Badges -->
-    <div class="tech-badges">
-      <span class="tech-badge">Excel</span>
-      <span class="tech-badge">Python (Pandas)</span>
-      <span class="tech-badge">PowerPoint</span>
-    </div>
+            <p class="impact-headline">500K-1M€ gain potentiel identifié</p>
 
-    <!-- Situation -->
-    <div class="section">
-      <div class="section-title">Situation</div>
-      <div class="section-content">
-        <p>Savencia, groupe agroalimentaire spécialisé dans les produits laitiers, observe une sous-performance de certaines business units par rapport aux objectifs budgétaires. L'enjeu : identifier les causes racines de ces écarts et proposer des leviers d'amélioration actionnables rapidement.</p>
-      </div>
-    </div>
+            <div class="meta-info">
+                <div class="meta-item">
+                    <span>📅</span>
+                    3-21 nov. 2024 · 3 semaines
+                </div>
+                <div class="meta-item">
+                    <span>👥</span>
+                    Équipe de 3 · Leader & Business Analyst
+                </div>
+            </div>
 
-    <!-- Tâche -->
-    <div class="section">
-      <div class="section-title">Tâche</div>
-      <div class="section-content">
-        <p>Réaliser une analyse top-down exhaustive de la performance commerciale, en décomposant les écarts par marque, catégorie, sous-catégorie et quartile de performance, afin d'identifier les quick wins activables immédiatement.</p>
-      </div>
-    </div>
+            <div class="tech-badges">
+                <span class="badge">Excel (Analyse)</span>
+                <span class="badge">Python (Pandas, Data Cleaning)</span>
+                <span class="badge">PowerPoint</span>
+            </div>
+        </header>
 
-    <!-- Impact Box -->
-    <div class="impact-box">
-      <div class="section-title">Impact</div>
-      <div class="section-content">
-        <div class="result-item">
-          <span class="result-icon">💰</span>
-          <span><strong>500K-1M€ gain potentiel chiffré</strong> — Avec intervalle de confiance à 90%, basé sur l'historique des actions similaires</span>
+        <div class="content">
+            <section class="section">
+                <h2 class="section-title">Contexte</h2>
+                <div class="section-content">
+                    <p>Savencia Food Service Premium observe une contre-performance commerciale significative de ses Business Units Italie et Espagne par rapport à la France, insuffisamment expliquée par les analyses existantes.</p>
+                    <p>L'enjeu : exploiter les données de facturation pour diagnostiquer, quantifier et expliquer les écarts de performance entre BUs, puis proposer des leviers d'action concrets (quick wins et actions structurantes) pour réduire l'écart.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Mission</h2>
+                <div class="section-content">
+                    <p>Analyser 2 ans de données transactionnelles multi-sources pour identifier les drivers de sous-performance (prix, volume, mix produit, promotions) et formuler des recommandations actionnables rapides.</p>
+                    <span class="dataset-tag">Volume : 3M+ factures · 300K clients · 20K produits</span>
+                    <span class="dataset-tag">Scope : Janv 2023 - Oct 2025 · 3 BUs Europe</span>
+                    <span class="dataset-tag">Type : Transactions B2B/B2C · Hiérarchie produits · Comportements d'achat · Promotions</span>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title highlight">Impact</h2>
+                <div class="section-content">
+                    <div class="results-box">
+                        <div class="result-item">
+                            <div class="result-content">
+                                <strong>500K-1M€ gain estimé (IC 90%)</strong>
+                                <span>Recommandations actionnables sur sous-catégorie Chocolat B de la marque CacaoLuxe en IT/ES</span>
+                            </div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-content">
+                                <strong>70% de la sous-performance expliquée</strong>
+                                <span>Déplacement volumes vers quartile Q1 (bas prix) : Q1 passe de 50% à 77% des ventes sur Chocolat B CacaoLuxe</span>
+                            </div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-content">
+                                <strong>3 quick wins identifiés</strong>
+                                <span>Formation commerciaux upsell · Arrêt campagnes agressives Q1 · Automatisation cross-sell online</span>
+                            </div>
+                        </div>
+                        <div class="deliverable-note">
+                            <strong>Livrable :</strong> Présentation exécutive avec décomposition analytique complète · Diagnostic root cause par BU · Plan d'action priorisé avec estimation financière
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Approche</h2>
+                <div class="section-content">
+                    <p><strong>Méthodologie d'analyse descendante (top-down)</strong></p>
+                    <ul class="approach-list">
+                        <li><strong>Décomposition CA global :</strong> Modélisation CA = Nb clients × Fréquence × Prix moyen/kg × Volume moyen → Identification prix moyen/kg comme driver principal (70% croissance BU1 vs variations négatives IT/ES)</li>
+                        <li><strong>Analyse marques :</strong> Contribution prix/volume par marque → Identification de 2 causes distinctes : (1) baisse prix CacaoLuxe en IT/ES vs stabilité FR, (2) explosion ventes NoirÉclat (marque premium) en FR uniquement</li>
+                        <li><strong>Drill-down catégories CacaoLuxe :</strong> Décomposition par gamme produits → Gamme chocolat responsable à 100% de la baisse prix en IT/ES</li>
+                        <li><strong>Analyse quartiles sous-catégories :</strong> Distribution ventes par quartile de prix pour Chocolat B et C
+                            <ul class="sub-list">
+                                <li>Chocolat B : déplacement massif Q4/Q3/Q2 → Q1 (50% → 77% des ventes) = 70% de la sous-perf</li>
+                                <li>Chocolat C : augmentation Q1 par effet mécanique (pondération) = 30% de la sous-perf, non problématique</li>
+                            </ul>
+                        </li>
+                        <li><strong>Root cause validation :</strong> Campagnes promotionnelles agressives sur Q1 Chocolat B + manque d'upsell commercial = cannibalization quartiles premium</li>
+                        <li><strong>Formulation recommandations :</strong> Identification 3 leviers actionnables immédiats avec estimation financière et intervalle de confiance à 90%</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Retour d'expérience</h2>
+                <div class="section-content">
+                    <div class="feedback-box">
+                        <p><strong>Retour Savencia :</strong> "Capacité de synthèse très impressionnante, énorme travail analytique, solidité analytique remarquable."</p>
+                        
+                        <p><strong>Réflexion personnelle :</strong> Nous avons présenté trop d'éléments le jour J. J'ai depuis appris à présenter moins, plus simplement, et à garder des informations détaillées uniquement si on me les demande. Nous voulions montrer l'ampleur du travail réalisé, mais cela n'était pas le plus productif pour l'audience. Leçon retenue : privilégier l'impact et la clarté à l'exhaustivité.</p>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="result-item">
-          <span class="result-icon">🔍</span>
-          <span><strong>70% de la sous-performance expliquée</strong> — Identification des 3 causes racines principales avec quantification précise</span>
-        </div>
-        <div class="result-item">
-          <span class="result-icon">⚡</span>
-          <span><strong>3 quick wins identifiés</strong> — Formation équipes, arrêt campagnes non-rentables, automatisation reporting</span>
-        </div>
-      </div>
-    </div>
 
-    <!-- Approche -->
-    <div class="section">
-      <div class="section-title">Approche & Méthodologie</div>
-      <div class="section-content">
-        <ul class="approach-list">
-          <li class="approach-item">
-            <span class="approach-number">1</span>
-            <span><strong>Vue globale CA</strong> → Analyse de l'écart budget vs réalisé au niveau groupe</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">2</span>
-            <span><strong>Décomposition par marques</strong> → Identification des marques contribuant le plus à l'écart</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">3</span>
-            <span><strong>Analyse par catégories</strong> → Drill-down dans les catégories de produits sous-performantes</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">4</span>
-            <span><strong>Sous-catégories</strong> → Granularité fine pour isoler les SKU problématiques</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">5</span>
-            <span><strong>Analyse par quartiles</strong> → Segmentation des produits par niveau de performance</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">6</span>
-            <span><strong>Root cause analysis</strong> → Identification des facteurs explicatifs (pricing, distribution, promotion)</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Feedback -->
-    <div class="feedback-box">
-      <div class="feedback-title">Retour d'expérience</div>
-      <p>Ce projet m'a appris l'importance de la rigueur dans l'analyse descendante : chaque niveau doit être validé avant de passer au suivant. J'ai également réalisé que la simplification de la présentation est aussi importante que la qualité de l'analyse — les décideurs ont besoin de messages clairs, pas de détails techniques.</p>
-    </div>
-
-    <!-- NDA Notice -->
-    <div class="nda-notice">
-      * Projet réalisé dans le cadre académique — Données confidentielles sous NDA
-    </div>
-  </div>
+        <footer class="footer">
+            <p class="nda-note">* Projet confidentiel soumis à NDA – Données et noms de produits modifiés</p>
+        </footer>
+    </article>
 </body>
 </html>

@@ -1,317 +1,415 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SEB - Analyse Conversion D2C</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #ffffff;
-      color: #1a1a1a;
-      line-height: 1.6;
-      padding: 32px;
-    }
-    .card {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .header {
-      margin-bottom: 24px;
-    }
-    .badges {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 12px;
-    }
-    .badge-internship {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 4px 10px;
-      font-size: 11px;
-      font-weight: 600;
-      background: #2d5f8d;
-      color: white;
-      border-radius: 4px;
-    }
-    .category {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #666;
-      margin-bottom: 12px;
-    }
-    .impact-headline {
-      font-size: 28px;
-      font-weight: 700;
-      color: #1a1a1a;
-      margin-bottom: 8px;
-    }
-    .impact-highlight {
-      color: #ff9900;
-    }
-    .title {
-      font-size: 18px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 16px;
-    }
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      font-size: 13px;
-      color: #666;
-      margin-bottom: 24px;
-    }
-    .tech-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 24px;
-    }
-    .tech-badge {
-      display: inline-block;
-      padding: 4px 10px;
-      font-size: 11px;
-      font-weight: 500;
-      background: #f5f5f5;
-      border: 1px solid #e0e0e0;
-      border-radius: 4px;
-      color: #444;
-    }
-    .section {
-      margin-bottom: 24px;
-    }
-    .section-title {
-      font-size: 13px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #2d5f8d;
-      margin-bottom: 12px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #2d5f8d;
-    }
-    .section-content {
-      font-size: 14px;
-      color: #444;
-    }
-    .section-content p {
-      margin-bottom: 12px;
-    }
-    .impact-box {
-      background: #f8f8f8;
-      border: 2px solid #ff9900;
-      border-radius: 4px;
-      padding: 20px;
-      margin-bottom: 24px;
-    }
-    .impact-box .section-title {
-      color: #ff9900;
-      border-bottom-color: #ff9900;
-    }
-    .result-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-    .result-icon {
-      flex-shrink: 0;
-      width: 20px;
-      height: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      color: #ff9900;
-    }
-    .approach-list {
-      list-style: none;
-    }
-    .approach-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 12px;
-      font-size: 14px;
-      color: #444;
-    }
-    .approach-number {
-      flex-shrink: 0;
-      width: 24px;
-      height: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #2d5f8d;
-      color: white;
-      border-radius: 50%;
-      font-size: 12px;
-      font-weight: 600;
-    }
-    .nda-notice {
-      text-align: center;
-      font-size: 12px;
-      font-style: italic;
-      color: #888;
-      margin-top: 32px;
-      padding-top: 16px;
-      border-top: 1px solid #e0e0e0;
-    }
-    .feedback-box {
-      background: #fffbf0;
-      border-left: 3px solid #ff9900;
-      padding: 16px;
-      margin-top: 24px;
-      font-size: 14px;
-      font-style: italic;
-      color: #555;
-    }
-    .feedback-title {
-      font-weight: 600;
-      font-style: normal;
-      margin-bottom: 8px;
-      color: #333;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Portfolio - Analyse Conversion SEB D2C</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background: #fafafa;
+            padding: 40px 20px;
+            line-height: 1.6;
+            color: #1a1a1a;
+        }
+
+        .project-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid #e5e5e5;
+            overflow: hidden;
+        }
+
+        .header {
+            padding: 48px 48px 32px 48px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .category {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #4a4a4a;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .category-icon {
+            width: 16px;
+            height: 16px;
+            opacity: 0.6;
+        }
+
+        .project-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .company-name {
+            color: #2d5f8d;
+        }
+
+        .impact-headline {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2d5f8d;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .meta-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            font-size: 14px;
+            color: #4a4a4a;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .badge {
+            background: white;
+            border: 1px solid #e5e5e5;
+            color: #4a4a4a;
+            padding: 4px 10px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .content {
+            padding: 48px;
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .section-title.highlight {
+            color: #ff9900;
+        }
+
+        .section-content {
+            color: #4a4a4a;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .section-content p {
+            margin-bottom: 12px;
+        }
+
+        .dataset-tag {
+            display: inline-block;
+            background: #f8f9fa;
+            border: 1px solid #e5e5e5;
+            padding: 8px 12px;
+            margin-top: 8px;
+            margin-right: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .results-box {
+            background: #f8f9fa;
+            border: 2px solid #ff9900;
+            padding: 24px;
+            margin-top: 16px;
+        }
+
+        .result-item {
+            margin-bottom: 20px;
+        }
+
+        .result-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .result-content strong {
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .result-content span {
+            font-size: 14px;
+            color: #4a4a4a;
+        }
+
+        .deliverable-note {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e5e5;
+            font-size: 14px;
+            color: #4a4a4a;
+        }
+
+        .deliverable-note strong {
+            color: #1a1a1a;
+        }
+
+        .feedback-box {
+            background: #fffbf0;
+            border-left: 3px solid #ff9900;
+            padding: 20px;
+            margin-top: 16px;
+            font-style: italic;
+            color: #4a4a4a;
+            line-height: 1.7;
+        }
+
+        .feedback-box p {
+            margin-bottom: 12px;
+        }
+
+        .feedback-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .approach-list {
+            list-style: none;
+            margin-top: 12px;
+        }
+
+        .approach-list li {
+            margin-bottom: 16px;
+            padding-left: 24px;
+            position: relative;
+            color: #4a4a4a;
+            font-size: 15px;
+        }
+
+        .approach-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #2d5f8d;
+            font-weight: 700;
+        }
+
+        .approach-list li strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .sub-list {
+            margin-top: 8px;
+            margin-left: 0;
+            list-style: none;
+        }
+
+        .sub-list li {
+            padding-left: 20px;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+
+        .sub-list li::before {
+            content: "·";
+            font-weight: 700;
+        }
+
+        .footer {
+            padding: 24px 48px;
+            background: #f8f9fa;
+            border-top: 1px solid #e5e5e5;
+            text-align: center;
+        }
+
+        .nda-note {
+            font-size: 14px;
+            color: #4a4a4a;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 32px 24px 24px 24px;
+            }
+
+            .impact-headline {
+                font-size: 24px;
+            }
+
+            .project-title {
+                font-size: 20px;
+            }
+
+            .content {
+                padding: 32px 24px;
+            }
+
+            .footer {
+                padding: 20px 24px;
+            }
+
+            .results-box {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="card">
-    <!-- Header -->
-    <div class="header">
-      <div class="badges">
-        <span class="badge-internship">💼 Stage</span>
-      </div>
-      <div class="category">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-        </svg>
-        Consumer Goods - D2C
-      </div>
-      <div class="impact-headline">
-        Paradoxe <span class="impact-highlight">résolu</span> : +45% sessions, -0.18pts conversion
-      </div>
-      <div class="title">Analyse conversion taux D2C SEB Group</div>
-    </div>
+    <article class="project-card">
+        <header class="header">
+            <div class="category">
+                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                E-commerce D2C
+            </div>
 
-    <!-- Meta -->
-    <div class="meta">
-      <div class="meta-item">Stage 6 mois - SEB Group</div>
-      <div class="meta-item">Business Analyst D2C Online (solo)</div>
-    </div>
+            <h1 class="project-title">Diagnostic conversion rate <span class="company-name">SEB Group</span> (France)</h1>
 
-    <!-- Tech Badges -->
-    <div class="tech-badges">
-      <span class="tech-badge">Qlik</span>
-      <span class="tech-badge">SQL</span>
-      <span class="tech-badge">Google Analytics</span>
-      <span class="tech-badge">Excel</span>
-      <span class="tech-badge">PowerPoint</span>
-    </div>
+            <p class="impact-headline">Paradoxe résolu : +45% trafic / -0.18pts conversion</p>
 
-    <!-- Situation -->
-    <div class="section">
-      <div class="section-title">Situation</div>
-      <div class="section-content">
-        <p>Situation paradoxale sur le canal D2C Europe : malgré une forte croissance des sessions (+45%), le taux de conversion global diminue. Question stratégique : est-ce un vrai problème de performance ou un effet mécanique lié au changement de mix trafic ?</p>
-      </div>
-    </div>
+            <div class="meta-info">
+                <div class="meta-item">
+                    <span>📅</span>
+                    Janv. - Mai 2025 · Stage 6 mois
+                </div>
+                <div class="meta-item">
+                    <span>👤</span>
+                    Solo · Business Analyst D2C Online
+                </div>
+            </div>
 
-    <!-- Tâche -->
-    <div class="section">
-      <div class="section-title">Tâche</div>
-      <div class="section-content">
-        <p>Séparer les effets mathématiques (pondération) des vrais problèmes (qualité trafic, assortiment). Analyser les parcours clients et le catalogue produits pour identifier les leviers d'amélioration actionnables.</p>
-      </div>
-    </div>
+            <div class="tech-badges">
+                <span class="badge">Qlik Sense</span>
+                <span class="badge">SQL</span>
+                <span class="badge">Google Analytics</span>
+                <span class="badge">Excel (Analyse)</span>
+                <span class="badge">PowerPoint</span>
+            </div>
+        </header>
 
-    <!-- Impact Box -->
-    <div class="impact-box">
-      <div class="section-title">Impact</div>
-      <div class="section-content">
-        <div class="result-item">
-          <span class="result-icon">🔍</span>
-          <span><strong>Paradoxe résolu</strong> — 45% de la baisse de conversion est un effet mécanique : quand une marque à faible conversion prend plus de poids dans le mix, le taux global baisse mécaniquement même si chaque marque performe mieux</span>
+        <div class="content">
+            <section class="section">
+                <h2 class="section-title">Contexte</h2>
+                <div class="section-content">
+                    <p>Les sites e-commerce français du Groupe SEB connaissent une situation paradoxale : le trafic explose (+45% visiteurs) mais le taux de conversion baisse (-0.18 points). Est-ce un problème ou un effet normal de la croissance ?</p>
+                    <p>L'enjeu : comprendre si cette baisse cache un vrai problème de performance ou s'il s'agit d'un effet mathématique lié à la croissance. Identifier ensuite les actions concrètes pour transformer ce trafic croissant en ventes additionnelles.</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Mission</h2>
+                <div class="section-content">
+                    <p>Analyser 5 mois de données web pour comprendre pourquoi le taux de conversion baisse malgré la croissance du trafic. Séparer les effets mathématiques des vrais problèmes. Présenter les conclusions et recommandations au Chief Marketing Officer.</p>
+                    <span class="dataset-tag">Volume : Millions de sessions · Transactions · Pages vues</span>
+                    <span class="dataset-tag">Scope : Janv-Mai 2025 vs 2024 · France · 5 marques</span>
+                    <span class="dataset-tag">Type : Parcours clients · Sources de trafic · Catalogue produits · Stocks</span>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title highlight">Impact</h2>
+                <div class="section-content">
+                    <div class="results-box">
+                        <div class="result-item">
+                            <div class="result-content">
+                                <strong>Paradoxe résolu : croissance saine confirmée</strong>
+                                <span>45% de la baisse conversion expliquée par effet mathématique : la marque qui grossit le plus vite (A) a historiquement un taux de conversion plus faible (0.35% vs 0.70-0.95% pour les autres). Pas de problème de performance réelle.</span>
+                            </div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-content">
+                                <strong>Vrais leviers d'amélioration identifiés</strong>
+                                <span>2 gammes de produits reçoivent beaucoup de visites mais vendent peu. Analyse détaillée révèle : problèmes de prix face à la concurrence, pas de rupture de stock.</span>
+                            </div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-content">
+                                <strong>Quick win stratégique : monétiser le trafic recettes</strong>
+                                <span>Les pages recettes explosent (+95% visites) mais ne permettent pas d'acheter. Recommandation : intégrer des boutons d'achat directs. L'équipe marque A lance déjà la réflexion produit.</span>
+                            </div>
+                        </div>
+                        <div class="deliverable-note">
+                            <strong>Livrables :</strong> Présentation exécutive au CMO · Rapport détaillé avec toutes les analyses pour l'équipe D2C online
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Approche</h2>
+                <div class="section-content">
+                    <p><strong>Méthodologie d'investigation en 7 étapes</strong></p>
+                    <ul class="approach-list">
+                        <li><strong>Identification des marques qui tirent la croissance :</strong> 3 marques sur 5 expliquent 100% de l'augmentation du trafic → On concentre l'analyse sur ces 3 marques</li>
+                        <li><strong>Calcul de l'effet mathématique :</strong> La marque A (qui grossit le plus vite) a toujours eu un taux de conversion plus faible. Quand elle prend plus de poids, la moyenne générale baisse mécaniquement → 45% de la baisse expliquée</li>
+                        <li><strong>Analyse par canal d'acquisition :</strong> Création d'un "Indice de Responsabilité" mesurant l'impact de chaque canal (Google, Direct, etc.) sur la conversion → Les canaux Direct et SEO amènent beaucoup de volume mais avec une légère baisse de conversion</li>
+                        <li><strong>Étude de la qualité des visites :</strong> Combien de pages les visiteurs regardent-ils ?
+                            <ul class="sub-list">
+                                <li>Trafic Direct : plus de visites courtes (1-2 pages), qui convertissent naturellement moins</li>
+                                <li>Trafic SEO : même nombre de pages visitées qu'avant, mais conversion en baisse quand même</li>
+                            </ul>
+                        </li>
+                        <li><strong>Analyse du type de pages visitées :</strong> Quelles pages attirent le trafic ? → Les pages recettes explosent (+95%) mais on ne peut pas acheter dessus. Les pages produits augmentent aussi (+95%) ce qui est positif</li>
+                        <li><strong>Cartographie des produits performants vs sous-performants :</strong> Graphique croisant "nombre de vues" et "nombre d'achats" → 2 gammes de produits ressortent : beaucoup vues, peu achetées</li>
+                        <li><strong>Analyse détaillée des produits problématiques :</strong> Zoom sur les références spécifiques → Exemple : un produit avec +80% de vues mais -2.8 points de conversion, pas de rupture stock, prix baissé de 15% mais toujours pas compétitif</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Retour d'expérience</h2>
+                <div class="section-content">
+                    <div class="feedback-box">
+                        <p><strong>Impact post-présentation :</strong> Suite à la présentation au CMO, l'équipe en charge de la marque A a initié une réflexion produit pour intégrer des zones d'achat directement sur les pages recettes (actuellement 0% de fonctionnalité e-commerce sur ce type de contenu). Cette recommandation stratégique vise à capitaliser sur les +95% de croissance trafic recettes observés.</p>
+                        
+                        <p><strong>Réflexion personnelle :</strong> Ce projet m'a permis de développer une méthodologie rigoureuse d'investigation data en contexte business réel. La création du "Responsibility Index" pour quantifier l'impact multi-dimensionnel (marque × canal × conversion) a été particulièrement formatrice. Travailler en autonomie avec validation régulière de mon maître de stage m'a appris à structurer une analyse complexe de manière progressive et à adapter ma communication selon l'audience (équipes opérationnelles vs CMO).</p>
+                        
+                        <p><strong>Apprentissage clé :</strong> L'importance de distinguer effets mécaniques (pondération, mix) des effets structurels (qualité trafic, pertinence assortiment) pour éviter des conclusions erronées et orienter les actions vers les vrais leviers de valeur.</p>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="result-item">
-          <span class="result-icon">🎯</span>
-          <span><strong>Vrais leviers identifiés</strong> — 55% de la baisse vient de familles produits qui vendent peu malgré un fort trafic (décalage entre attentes clients et offre disponible)</span>
-        </div>
-        <div class="result-item">
-          <span class="result-icon">💡</span>
-          <span><strong>Quick win proposé</strong> — Les pages recettes génèrent beaucoup de trafic mais ne permettent pas d'acheter directement → Recommandation d'intégrer des zones d'achat dans les recettes (équipe marque initie déjà la réflexion)</span>
-        </div>
-      </div>
-    </div>
 
-    <!-- Approche -->
-    <div class="section">
-      <div class="section-title">Approche & Méthodologie</div>
-      <div class="section-content">
-        <ul class="approach-list">
-          <li class="approach-item">
-            <span class="approach-number">1</span>
-            <span><strong>Analyse par sites</strong> → Identification des sites D2C contribuant le plus à l'écart de conversion</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">2</span>
-            <span><strong>Décomposition par canaux</strong> → Distinction des sources de trafic (SEO, SEA, direct, social)</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">3</span>
-            <span><strong>Analyse pages/session</strong> → Identification des pages qui attirent du trafic sans convertir</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">4</span>
-            <span><strong>Typologie de pages</strong> → Recettes, fiches produits, catégories, landing pages</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">5</span>
-            <span><strong>Drill-down familles produits</strong> → Analyse des familles avec fort décalage vues/ventes</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">6</span>
-            <span><strong>Analyse SKU-level</strong> → Produits avec +80% de vues mais conversion sous-performante</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">7</span>
-            <span><strong>Effet pondération</strong> → Calcul de l'impact du changement de mix sur le taux global</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Livrables -->
-    <div class="section">
-      <div class="section-title">Livrables</div>
-      <div class="section-content">
-        <p>• Présentation exécutive au CMO<br>
-        • Rapport détaillé et backé de toutes les analyses pour l'équipe D2C online</p>
-      </div>
-    </div>
-
-    <!-- Feedback -->
-    <div class="feedback-box">
-      <div class="feedback-title">Retour d'expérience</div>
-      <p>Ce projet m'a appris l'importance de distinguer les effets mécaniques des vrais problèmes business. Travailler en autonomie avec validation du maître de stage m'a permis de développer mon ownership. L'adaptation de la communication selon l'audience (CMO vs équipe opérationnelle) a été un apprentissage clé.</p>
-    </div>
-
-    <!-- NDA Notice -->
-    <div class="nda-notice">
-      * Projet réalisé en stage — Données modifiées pour confidentialité (NDA)
-    </div>
-  </div>
+        <footer class="footer">
+            <p class="nda-note">* Projet confidentiel soumis à NDA – Noms de marques, chiffres et références produits modifiés pour confidentialité</p>
+        </footer>
+    </article>
 </body>
 </html>
