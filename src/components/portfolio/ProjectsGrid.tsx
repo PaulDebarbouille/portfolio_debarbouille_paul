@@ -76,9 +76,16 @@ const ProjectsGrid = () => {
                     <span className="text-xs text-muted-foreground uppercase tracking-wider">
                       {project.sector}
                     </span>
-                    <h3 className="text-sm font-medium text-accent leading-tight">
-                      {project.company}
-                    </h3>
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-sm font-medium text-accent leading-tight">
+                        {project.company}
+                      </h3>
+                      {project.date && (
+                        <span className="text-xs text-muted-foreground">
+                          ({project.date})
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </div>
 
