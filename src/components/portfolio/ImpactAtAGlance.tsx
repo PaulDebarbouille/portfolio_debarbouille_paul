@@ -23,7 +23,7 @@ const metrics = [
     number: "10",
     title: "Enterprises Served",
     micro: "Delivered analyses across diverse industries*",
-    theme: "enterprises",
+    theme: "bdd",
   },
   {
     number: "#1",
@@ -35,14 +35,14 @@ const metrics = [
     number: "1",
     title: "Professional Internship",
     micro: "Applied skills in real-world corporate environment*",
-    theme: "bdd",
+    theme: "internship",
   },
 ];
 
 const themeColors = {
-  bdd: "bg-[#E6F0FA] border-[#E6F0FA] hover:border-accent/50",
-  enterprises: "bg-[#FFF5E6] border-[#FFF5E6] hover:border-accent/50",
-  academic: "bg-[#F2F2F2] border-[#F2F2F2] hover:border-accent/50",
+  bdd: "border-[#E6F0FA] hover:border-[#c4daf3]",
+  academic: "border-[#F2F2F2] hover:border-[#d9d9d9]",
+  internship: "border-[#FFF5E6] hover:border-[#ffe4c4]",
 };
 
 const ImpactAtAGlance = () => {
@@ -69,7 +69,7 @@ const ImpactAtAGlance = () => {
             {metrics.map((metric, index) => (
               <div
                 key={index}
-                className={`animate-fade-up p-6 rounded-xl bg-card border-2 ${themeColors[metric.theme as keyof typeof themeColors]} transition-all duration-300 hover:shadow-lg`}
+                className={`animate-fade-up p-6 rounded-xl bg-card border-[3px] ${themeColors[metric.theme as keyof typeof themeColors]} transition-all duration-300 hover:shadow-lg`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="text-center">
