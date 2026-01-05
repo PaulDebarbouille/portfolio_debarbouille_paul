@@ -112,51 +112,61 @@ const ProjectsGrid = () => {
           })}
         </div>
 
-        {/* Secondary Projects - Compact List */}
+        {/* Secondary Projects - Clean List */}
         <div className="mb-12">
           <h3 className="text-lg font-semibold text-foreground mb-4 text-center">
             Autres projets
           </h3>
-          <div className="bg-secondary/30 rounded-xl border border-border/50 overflow-hidden">
+          <div className="space-y-3">
             {secondaryProjects.map((project, index) => {
               const SectorIcon = getSectorIcon(project.sector);
               return (
                 <div
                   key={project.id}
-                  className={`flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4 px-4 py-3 ${
-                    index !== secondaryProjects.length - 1 ? "border-b border-border/30" : ""
-                  }`}
+                  className="bg-secondary/30 rounded-xl border border-border/50 p-4 animate-fade-up"
+                  style={{ animationDelay: `${index * 0.03}s` }}
                 >
-                  {/* Logo & Company */}
-                  <div className="flex items-center gap-2 min-w-0 sm:w-40 flex-shrink-0">
-                    <div className="w-6 h-6 rounded bg-secondary flex items-center justify-center flex-shrink-0">
-                      <SectorIcon className="h-3 w-3 text-muted-foreground opacity-60" />
+                  {/* Header: Logo, Company, Sector, Badge */}
+                  <div className="flex flex-wrap items-center gap-3 mb-2">
+                    <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
+                      <SectorIcon className="h-4 w-4 text-muted-foreground" />
                     </div>
-                    <span className="text-sm font-medium text-foreground truncate">
-                      {project.company}
-                    </span>
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="text-base font-semibold text-foreground">
+                        {project.company}
+                      </span>
+                      <span className="text-xs text-muted-foreground px-2 py-0.5 bg-secondary rounded">
+                        {project.sector}
+                      </span>
+                    </div>
+                    {project.isWinner && (
+                      <div className="winner-badge flex items-center gap-1 ml-auto">
+                        <Trophy className="h-3 w-3" />
+                        Winner
+                      </div>
+                    )}
                   </div>
 
-                  {/* Details Row */}
-                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs sm:text-sm text-muted-foreground flex-1 min-w-0">
-                    <span className="font-medium text-foreground/80 truncate max-w-[200px]">
-                      {project.title}
-                    </span>
-                    <span className="hidden sm:inline text-border">|</span>
-                    <span className="truncate">{project.data || project.sector}</span>
-                    <span className="hidden sm:inline text-border">|</span>
-                    <span className="truncate">{project.mission || "Analyse"}</span>
-                    <span className="hidden sm:inline text-border">|</span>
-                    <span className="text-accent font-medium">{project.result || "Résultat"}</span>
-                  </div>
+                  {/* Title */}
+                  <h4 className="text-sm font-medium text-foreground/90 mb-2">
+                    {project.title}
+                  </h4>
 
-                  {/* Internship Badge */}
-                  {project.isInternship && (
-                    <div className="flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-primary/10 text-primary flex-shrink-0">
-                      <Briefcase className="h-3 w-3" />
-                      Stage
+                  {/* Details Grid */}
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 text-sm">
+                    <div>
+                      <span className="text-muted-foreground/70 text-xs uppercase tracking-wide">Données</span>
+                      <p className="text-muted-foreground">{project.data || project.sector}</p>
                     </div>
-                  )}
+                    <div>
+                      <span className="text-muted-foreground/70 text-xs uppercase tracking-wide">Mission</span>
+                      <p className="text-muted-foreground">{project.mission || "Analyse"}</p>
+                    </div>
+                    <div>
+                      <span className="text-muted-foreground/70 text-xs uppercase tracking-wide">Résultat</span>
+                      <p className="text-accent font-medium">{project.result || "Résultat"}</p>
+                    </div>
+                  </div>
                 </div>
               );
             })}
