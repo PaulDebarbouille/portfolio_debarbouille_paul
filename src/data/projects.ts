@@ -274,7 +274,7 @@ export const projects: Project[] = [
     logo: "/logos/descours-cabaud.png",
     data: "Product catalog",
     mission: "SEO & product catalog audit",
-    result: "50% description errors, 30% photo errors",
+    result: "Identified 50% description errors, 30% photo errors",
   },
   {
     id: "10",
