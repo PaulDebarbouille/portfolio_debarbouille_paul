@@ -3,8 +3,8 @@ import { ArrowDown } from "lucide-react";
 const metrics = [
   {
     number: "12",
-    title: "Team Leadership Roles",
-    micro: "Led cross-functional teams end-to-end*",
+    title: "C-Level Pitches",
+    micro: "Presented insights to executives*",
     theme: "bdd",
   },
   {
@@ -15,8 +15,8 @@ const metrics = [
   },
   {
     number: "12",
-    title: "C-Level Pitches",
-    micro: "Presented insights to executives*",
+    title: "Team Leadership Roles",
+    micro: "Led cross-functional teams end-to-end*",
     theme: "bdd",
   },
   {
@@ -26,16 +26,16 @@ const metrics = [
     theme: "bdd",
   },
   {
-    number: "#1",
-    title: "Academic Ranking",
-    micro: "Ranked #1 academically*",
-    theme: "academic",
-  },
-  {
     number: "1",
     title: "Professional Internship",
     micro: "Applied skills in real-world corporate environment*",
     theme: "internship",
+  },
+  {
+    number: "#1",
+    title: "Academic Ranking",
+    micro: "Ranked #1 academically*",
+    theme: "academic",
   },
 ];
 
