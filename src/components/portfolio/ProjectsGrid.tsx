@@ -74,21 +74,21 @@ const ProjectsGrid = () => {
                       <span className="text-xs text-muted-foreground uppercase tracking-wider">
                         {project.sector}
                       </span>
-                      <h3 className="text-sm font-semibold text-accent leading-tight">
+                      <h3 className="text-sm font-medium text-accent leading-tight">
                         {project.company}
                       </h3>
                     </div>
                   </div>
 
                   {/* Title */}
-                  <h4 className="text-base font-semibold text-foreground leading-tight">
+                  <h4 className="text-base font-medium text-foreground leading-tight">
                     {project.title}
                   </h4>
 
                   {/* Result in Orange */}
                   <p className="text-sm">
                     <span className="text-muted-foreground">Result: </span>
-                    <span className="text-primary font-medium">{project.result}</span>
+                    <span className="text-primary">{project.result}</span>
                   </p>
 
                   {/* Tools Preview */}
@@ -131,7 +131,7 @@ const ProjectsGrid = () => {
 
                   {/* Row 1: Company - Title (Date) */}
                   <div className="flex items-center gap-2 flex-wrap mb-2 pr-16">
-                    <span className="text-sm font-semibold text-foreground">
+                    <span className="text-sm font-medium text-foreground">
                       {project.company}
                     </span>
                     <span className="text-muted-foreground">–</span>
