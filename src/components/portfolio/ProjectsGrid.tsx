@@ -167,7 +167,7 @@ const ProjectsGrid = () => {
                     {project.result && (
                       <>
                         <span className="text-border">|</span>
-                        <span className="text-accent font-medium">{project.result}</span>
+                        <span className="text-primary font-medium">{project.result}</span>
                       </>
                     )}
                   </div>
