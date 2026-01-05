@@ -8,9 +8,9 @@ const metrics = [
     theme: "bdd",
   },
   {
-    number: "8",
-    title: "BDD Projects Wins",
-    micro: "Achieved #1 results in cohort*",
+    number: "9/13 (69%)",
+    title: "BDD Project Wins",
+    micro: "Top performance in cohort*",
     theme: "bdd",
   },
   {
