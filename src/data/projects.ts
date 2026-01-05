@@ -86,7 +86,7 @@ export const projects: Project[] = [
     isWinner: true,
     isInternship: false,
     isPrimary: true,
-    logo: "/logos/valrhona.jpg",
+    logo: "/logos/savencia.png",
     shortDescription: "€500K–€1M potential gain (90% CI) — Found root causes of underperformance",
     result: "€500K–€1M potential gain (90% CI) — Found root causes of underperformance",
     situation: "Some business units underperforming vs targets.",
