@@ -5,33 +5,45 @@ const metrics = [
     number: "12",
     title: "Team Leadership Roles",
     micro: "Led cross-functional teams end-to-end*",
+    theme: "professional",
   },
   {
     number: "8",
     title: "BDD Projects Wins",
     micro: "Achieved #1 results in cohort*",
+    theme: "professional",
   },
   {
     number: "12",
     title: "C-Level Pitches",
     micro: "Presented insights to executives*",
+    theme: "professional",
   },
   {
     number: "10",
     title: "Enterprises Served",
     micro: "Delivered analyses across diverse industries*",
+    theme: "professional",
   },
   {
     number: "#1",
     title: "Academic Ranking",
     micro: "Ranked #1 academically*",
+    theme: "academic",
   },
   {
     number: "1",
     title: "Professional Internship",
     micro: "Applied skills in real-world corporate environment*",
+    theme: "internship",
   },
 ];
+
+const themeColors = {
+  professional: "border-accent/60 hover:border-accent",
+  academic: "border-blue-500/60 hover:border-blue-500",
+  internship: "border-emerald-500/60 hover:border-emerald-500",
+};
 
 const ImpactAtAGlance = () => {
   const scrollToNext = () => {
@@ -57,7 +69,7 @@ const ImpactAtAGlance = () => {
             {metrics.map((metric, index) => (
               <div
                 key={index}
-                className="animate-fade-up p-6 rounded-xl bg-card border border-border hover:border-accent/50 transition-all duration-300 hover:shadow-lg"
+                className={`animate-fade-up p-6 rounded-xl bg-card border-2 ${themeColors[metric.theme as keyof typeof themeColors]} transition-all duration-300 hover:shadow-lg`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
                 <div className="text-center">
