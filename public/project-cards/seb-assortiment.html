@@ -1,312 +1,422 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SEB - Analyse Performance Famille Produits</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #ffffff;
-      color: #1a1a1a;
-      line-height: 1.6;
-      padding: 32px;
-    }
-    .card {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .header {
-      margin-bottom: 24px;
-    }
-    .badges {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 12px;
-    }
-    .badge-internship {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 4px 10px;
-      font-size: 11px;
-      font-weight: 600;
-      background: #2d5f8d;
-      color: white;
-      border-radius: 4px;
-    }
-    .category {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #666;
-      margin-bottom: 12px;
-    }
-    .impact-headline {
-      font-size: 28px;
-      font-weight: 700;
-      color: #1a1a1a;
-      margin-bottom: 8px;
-    }
-    .impact-highlight {
-      color: #ff9900;
-    }
-    .title {
-      font-size: 18px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 16px;
-    }
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      font-size: 13px;
-      color: #666;
-      margin-bottom: 24px;
-    }
-    .tech-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 24px;
-    }
-    .tech-badge {
-      display: inline-block;
-      padding: 4px 10px;
-      font-size: 11px;
-      font-weight: 500;
-      background: #f5f5f5;
-      border: 1px solid #e0e0e0;
-      border-radius: 4px;
-      color: #444;
-    }
-    .section {
-      margin-bottom: 24px;
-    }
-    .section-title {
-      font-size: 13px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #2d5f8d;
-      margin-bottom: 12px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #2d5f8d;
-    }
-    .section-content {
-      font-size: 14px;
-      color: #444;
-    }
-    .section-content p {
-      margin-bottom: 12px;
-    }
-    .impact-box {
-      background: #f8f8f8;
-      border: 2px solid #ff9900;
-      border-radius: 4px;
-      padding: 20px;
-      margin-bottom: 24px;
-    }
-    .impact-box .section-title {
-      color: #ff9900;
-      border-bottom-color: #ff9900;
-    }
-    .result-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-    .result-icon {
-      flex-shrink: 0;
-      width: 20px;
-      height: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      color: #ff9900;
-    }
-    .approach-list {
-      list-style: none;
-    }
-    .approach-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 12px;
-      font-size: 14px;
-      color: #444;
-    }
-    .approach-number {
-      flex-shrink: 0;
-      width: 24px;
-      height: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #2d5f8d;
-      color: white;
-      border-radius: 50%;
-      font-size: 12px;
-      font-weight: 600;
-    }
-    .nda-notice {
-      text-align: center;
-      font-size: 12px;
-      font-style: italic;
-      color: #888;
-      margin-top: 32px;
-      padding-top: 16px;
-      border-top: 1px solid #e0e0e0;
-    }
-    .feedback-box {
-      background: #fffbf0;
-      border-left: 3px solid #ff9900;
-      padding: 16px;
-      margin-top: 24px;
-      font-size: 14px;
-      font-style: italic;
-      color: #555;
-    }
-    .feedback-title {
-      font-weight: 600;
-      font-style: normal;
-      margin-bottom: 8px;
-      color: #333;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Portfolio - Analyse Performance Famille Produits SEB</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background: #fafafa;
+            padding: 40px 20px;
+            line-height: 1.6;
+            color: #1a1a1a;
+        }
+
+        .project-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid #e5e5e5;
+            overflow: hidden;
+        }
+
+        .header {
+            padding: 48px 48px 32px 48px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .category {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #4a4a4a;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .category-icon {
+            width: 16px;
+            height: 16px;
+            opacity: 0.6;
+        }
+
+        .project-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .company-name {
+            color: #2d5f8d;
+        }
+
+        .impact-headline {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2d5f8d;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .meta-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            font-size: 14px;
+            color: #4a4a4a;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .badge {
+            background: white;
+            border: 1px solid #e5e5e5;
+            color: #4a4a4a;
+            padding: 4px 10px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .content {
+            padding: 48px;
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .section-title.highlight {
+            color: #ff9900;
+        }
+
+        .section-content {
+            color: #4a4a4a;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .section-content p {
+            margin-bottom: 12px;
+        }
+
+        .dataset-tag {
+            display: inline-block;
+            background: #f8f9fa;
+            border: 1px solid #e5e5e5;
+            padding: 8px 12px;
+            margin-top: 8px;
+            margin-right: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .results-box {
+            background: #f8f9fa;
+            border: 2px solid #ff9900;
+            padding: 24px;
+            margin-top: 16px;
+        }
+
+        .result-item {
+            margin-bottom: 20px;
+        }
+
+        .result-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .result-content strong {
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .result-content span {
+            font-size: 14px;
+            color: #4a4a4a;
+        }
+
+        .deliverable-note {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e5e5;
+            font-size: 14px;
+            color: #4a4a4a;
+        }
+
+        .deliverable-note strong {
+            color: #1a1a1a;
+        }
+
+        .feedback-box {
+            background: #fffbf0;
+            border-left: 3px solid #ff9900;
+            padding: 20px;
+            margin-top: 16px;
+            font-style: italic;
+            color: #4a4a4a;
+            line-height: 1.7;
+        }
+
+        .feedback-box p {
+            margin-bottom: 12px;
+        }
+
+        .feedback-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .approach-list {
+            list-style: none;
+            margin-top: 12px;
+        }
+
+        .approach-list li {
+            margin-bottom: 16px;
+            padding-left: 24px;
+            position: relative;
+            color: #4a4a4a;
+            font-size: 15px;
+        }
+
+        .approach-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #2d5f8d;
+            font-weight: 700;
+        }
+
+        .approach-list li strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .sub-list {
+            margin-top: 8px;
+            margin-left: 0;
+            list-style: none;
+        }
+
+        .sub-list li {
+            padding-left: 20px;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+
+        .sub-list li::before {
+            content: "·";
+            font-weight: 700;
+        }
+
+        .footer {
+            padding: 24px 48px;
+            background: #f8f9fa;
+            border-top: 1px solid #e5e5e5;
+            text-align: center;
+        }
+
+        .nda-note {
+            font-size: 14px;
+            color: #4a4a4a;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 32px 24px 24px 24px;
+            }
+
+            .impact-headline {
+                font-size: 24px;
+            }
+
+            .project-title {
+                font-size: 20px;
+            }
+
+            .content {
+                padding: 32px 24px;
+            }
+
+            .footer {
+                padding: 20px 24px;
+            }
+
+            .results-box {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="card">
-    <!-- Header -->
-    <div class="header">
-      <div class="badges">
-        <span class="badge-internship">💼 Stage</span>
-      </div>
-      <div class="category">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-        </svg>
-        Consumer Goods - D2C
-      </div>
-      <div class="impact-headline">
-        Croissance <span class="impact-highlight">+28%</span> validée sans cannibalisation
-      </div>
-      <div class="title">Analyse performance nouvelle famille produits SEB</div>
-    </div>
+    <article class="project-card">
+        <header class="header">
+            <div class="category">
+                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="9" cy="21" r="1"></circle>
+                    <circle cx="20" cy="21" r="1"></circle>
+                    <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+                </svg>
+                E-commerce D2C
+            </div>
 
-    <!-- Meta -->
-    <div class="meta">
-      <div class="meta-item">Stage 6 mois - SEB Group</div>
-      <div class="meta-item">Business Analyst D2C Online</div>
-    </div>
+            <h1 class="project-title">Analyse performance famille produits <span class="company-name">SEB</span> (Greater Europe)</h1>
 
-    <!-- Tech Badges -->
-    <div class="tech-badges">
-      <span class="tech-badge">Qlik</span>
-      <span class="tech-badge">SQL</span>
-      <span class="tech-badge">Excel</span>
-      <span class="tech-badge">PowerPoint</span>
-    </div>
+            <p class="impact-headline">Croissance +28% · 0 cannibalisation</p>
 
-    <!-- Situation -->
-    <div class="section">
-      <div class="section-title">Situation</div>
-      <div class="section-content">
-        <p>SEB Group a lancé une nouvelle famille de produits (Blenders haute performance) sur son canal D2C Europe. L'enjeu : mesurer l'impact réel de ce lancement sur les ventes et vérifier l'absence de cannibalisation avec la famille existante (Mixeurs traditionnels).</p>
-      </div>
-    </div>
+            <div class="meta-info">
+                <div class="meta-item">
+                    <span>📅</span>
+                    2025 · Rolling 12 mois · Stage
+                </div>
+                <div class="meta-item">
+                    <span>👤</span>
+                    Solo · Business Analyst D2C Online
+                </div>
+            </div>
 
-    <!-- Tâche -->
-    <div class="section">
-      <div class="section-title">Tâche</div>
-      <div class="section-content">
-        <p>Réaliser une analyse "défensive" complète pour prouver que la croissance observée est saine et que les deux familles peuvent cohabiter dans le portfolio produits, avec recommandations stratégiques pour le CMO.</p>
-      </div>
-    </div>
+            <div class="tech-badges">
+                <span class="badge">Qlik Sense</span>
+                <span class="badge">SQL</span>
+                <span class="badge">Google Analytics</span>
+                <span class="badge">Excel (Analyse)</span>
+                <span class="badge">PowerPoint</span>
+            </div>
+        </header>
 
-    <!-- Impact Box -->
-    <div class="impact-box">
-      <div class="section-title">Impact</div>
-      <div class="section-content">
-        <div class="result-item">
-          <span class="result-icon">📈</span>
-          <span><strong>Croissance +28% validée</strong> — La nouvelle famille démontre une résilience remarquable avec des fondamentaux solides et une dynamique commerciale positive</span>
+        <div class="content">
+            <section class="section">
+                <h2 class="section-title">Contexte</h2>
+                <div class="section-content">
+                    <p>Le Groupe SEB lance une nouvelle famille de produits (Blenders haute performance) sur ses sites D2C en Europe. Question stratégique : cette nouvelle gamme va-t-elle cannibaliser la famille historique Mixeurs traditionnels ou créer de la croissance additionnelle ?</p>
+                    <p>L'enjeu : évaluer la performance de la famille Mixeurs traditionnels sur 12 mois glissants, mesurer l'impact réel de l'arrivée des Blenders haute performance, et identifier les leviers de croissance par marché géographique (Europe du Nord, Centrale/Est, Est).</p>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Mission</h2>
+                <div class="section-content">
+                    <p>Analyser 12 mois de données e-commerce pour diagnostiquer les drivers de croissance de la famille Mixeurs traditionnels, détecter d'éventuels effets de cannibalisation avec les Blenders haute performance, et formuler des recommandations d'activation commerciale pour les équipes locales.</p>
+                    <span class="dataset-tag">Volume : Transactions · Trafic produit · Prix · Stocks · Marges</span>
+                    <span class="dataset-tag">Scope : Rolling 12 mois · Greater Europe · 3 zones géographiques</span>
+                    <span class="dataset-tag">Type : Performance produits · Canaux acquisition · Pricing · Disponibilité</span>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title highlight">Impact</h2>
+                <div class="section-content">
+                    <div class="results-box">
+                        <div class="result-item">
+                            <div class="result-content">
+                                <strong>Croissance saine confirmée : +28% sur 12 mois</strong>
+                                <span>Performance maintenue après lancement Blenders haute performance (+26% post-lancement). Aucune cannibalisation : les deux familles se complètent et créent de la croissance additionnelle.</span>
+                            </div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-content">
+                                <strong>Résilience remarquable dans un contexte d'offre en transformation</strong>
+                                <span>Croissance équilibrée portée par innovations bien gérées et références historiques solides. Aucun signal d'alerte : dynamique commerciale positive soutenue par des fondamentaux solides.</span>
+                            </div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-content">
+                                <strong>Recommandation stratégique : capitaliser sur la complémentarité</strong>
+                                <span>Maintenir stratégie pricing agressive + optimisation stocks pour maximiser momentum. Cohabitation saine Mixeurs/Blenders = levier pour planification future et rentabilité long terme.</span>
+                            </div>
+                        </div>
+                        <div class="deliverable-note">
+                            <strong>Livrables :</strong> Rapport détaillé pour équipes D2C Europe · Analyse cannibalisation Mixeurs/Blenders · Recommandations pricing et stock par zone géographique
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Approche</h2>
+                <div class="section-content">
+                    <p><strong>Méthodologie d'analyse structurée en 8 étapes</strong></p>
+                    <ul class="approach-list">
+                        <li><strong>Vérification absence de cannibalisation :</strong> Comparaison croissance Mixeurs avant/après lancement Blenders → Performance stable (+28% avant, +26% après). Analyse sur 3 ans confirme : pas de ralentissement, au contraire accélération du trafic</li>
+                        <li><strong>Identification zones géographiques performantes :</strong> Décomposition par région Europe → 2 zones concentrent 95% de la croissance, permettant de cibler les actions commerciales</li>
+                        <li><strong>Décomposition des sources de croissance :</strong> Analyse en cascade pour comprendre d'où vient la croissance
+                            <ul class="sub-list">
+                                <li>Trafic : principal moteur (+75% contribution)</li>
+                                <li>Conversion : amélioration significative (+18% contribution)</li>
+                                <li>Panier moyen : baisse volontaire pour être plus compétitif (-10% contribution)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Identification produits qui tirent la croissance :</strong> Analyse de 8 produits clés → Nouveaux produits vs produits historiques ont des stratégies différentes mais complémentaires</li>
+                        <li><strong>Analyse canaux marketing par produit :</strong> Cartographie d'où vient le trafic (Google, SEO naturel, Display, etc.)
+                            <ul class="sub-list">
+                                <li>Nouveaux produits : forte visibilité naturelle sur Google (SEO) + campagnes Display</li>
+                                <li>Produits historiques : investissements publicitaires maintenus (Google Ads, Paid)</li>
+                            </ul>
+                        </li>
+                        <li><strong>Analyse compétitivité prix :</strong> Identification de 2 produits stars avec baisse prix -5/-6% → Analyse pour vérifier si positionnement vs concurrence est optimal</li>
+                        <li><strong>Focus produits existants uniquement :</strong> Isolation des produits présents avant 2023 pour enlever l'effet "nouveauté" → Croissance portée à 95% par amélioration conversion (+0.5pts) grâce à meilleurs prix et moins de ruptures stock</li>
+                        <li><strong>Validation rentabilité :</strong> Calcul impact sur la marge par produit → Identification références maintenant rentabilité malgré baisse prix. Recommandation : être encore plus agressif sur prix pour référence top marge</li>
+                    </ul>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Retour d'expérience</h2>
+                <div class="section-content">
+                    <div class="feedback-box">
+                        <p><strong>Impact business :</strong> Cette analyse a permis de rassurer les équipes commerciales sur l'absence de cannibalisation entre les deux familles de produits. Les recommandations (pricing agressif + optimisation stocks sur zones performantes) ont été intégrées dans la stratégie d2c Greater Europe.</p>
+                        
+                        <p><strong>Réflexion personnelle :</strong> Ce projet m'a appris à conduire une analyse "défensive" (prouver l'absence d'un problème) tout aussi rigoureusement qu'une analyse "offensive" (identifier des opportunités). La création d'indices de responsabilité multi-dimensionnels (géo × produit × canal × KPI) m'a permis de quantifier précisément les contributions de chaque levier, facilitant la prise de décision pour les équipes locales.</p>
+                        
+                        <p><strong>Apprentissage clé :</strong> L'importance d'une analyse historique sur 3+ ans pour établir une baseline de tendance et distinguer les effets cycliques des effets structurels. Sans cette perspective long terme, la conclusion sur la cannibalisation aurait pu être erronée.</p>
+                    </div>
+                </div>
+            </section>
         </div>
-        <div class="result-item">
-          <span class="result-icon">✅</span>
-          <span><strong>Absence de cannibalisation prouvée</strong> — L'arrivée de la nouvelle catégorie renforce plutôt qu'elle ne fragilise la famille existante, créant une cohabitation saine</span>
-        </div>
-        <div class="result-item">
-          <span class="result-icon">🎯</span>
-          <span><strong>Recommandation stratégique</strong> — Maintenir une stratégie de pricing compétitif agressive tout en optimisant la gestion des stocks pour capitaliser sur ce momentum</span>
-        </div>
-      </div>
-    </div>
 
-    <!-- Approche -->
-    <div class="section">
-      <div class="section-title">Approche & Méthodologie</div>
-      <div class="section-content">
-        <ul class="approach-list">
-          <li class="approach-item">
-            <span class="approach-number">1</span>
-            <span><strong>Analyse croissance globale</strong> → Mesure de l'évolution du CA famille sur 12 mois glissants</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">2</span>
-            <span><strong>Décomposition géographique</strong> → Identification des zones contribuant le plus à la performance</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">3</span>
-            <span><strong>Cascade CA</strong> → Analyse des effets volume, prix, mix pour isoler les drivers de croissance</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">4</span>
-            <span><strong>Analyse like-for-like</strong> → Comparaison sur périmètre constant (3 ans) pour distinguer effets cycliques vs structurels</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">5</span>
-            <span><strong>Test de cannibalisation</strong> → Vérification que la croissance des Blenders ne se fait pas au détriment des Mixeurs</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">6</span>
-            <span><strong>Validation marge</strong> → Analyse produit par produit de l'impact sur la rentabilité</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Livrables -->
-    <div class="section">
-      <div class="section-title">Livrables</div>
-      <div class="section-content">
-        <p>• Présentation exécutive au CMO<br>
-        • Rapport détaillé et backé de toutes les analyses pour l'équipe D2C online</p>
-      </div>
-    </div>
-
-    <!-- Feedback -->
-    <div class="feedback-box">
-      <div class="feedback-title">Retour d'expérience</div>
-      <p>Ce projet m'a appris la différence entre une analyse "offensive" (chercher des opportunités) et "défensive" (prouver la solidité d'une stratégie). La rigueur de l'approche baseline sur 3 ans m'a permis de distinguer les effets cycliques des tendances structurelles — une compétence clé pour des recommandations crédibles.</p>
-    </div>
-
-    <!-- NDA Notice -->
-    <div class="nda-notice">
-      * Projet réalisé en stage — Données modifiées pour confidentialité (NDA)
-    </div>
-  </div>
+        <footer class="footer">
+            <p class="nda-note">* Projet confidentiel soumis à NDA – Noms de familles produits, zones géographiques et chiffres modifiés</p>
+        </footer>
+    </article>
 </body>
 </html>
