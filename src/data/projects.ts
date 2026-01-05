@@ -242,7 +242,7 @@ export const projects: Project[] = [
     ],
     tools: ["Python", "Excel"],
     principles: ["Dive Deep", "Insist on Highest Standards"],
-    logo: "/logos/prolians.png",
+    logo: "/logos/descours-cabaud.png",
     data: "Product catalog",
     mission: "SEO & product catalog audit",
     result: "50% description errors, 30% photo errors",
