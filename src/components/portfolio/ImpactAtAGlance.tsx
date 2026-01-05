@@ -5,25 +5,25 @@ const metrics = [
     number: "12",
     title: "Team Leadership Roles",
     micro: "Led cross-functional teams end-to-end*",
-    theme: "professional",
+    theme: "bdd",
   },
   {
     number: "8",
     title: "BDD Projects Wins",
     micro: "Achieved #1 results in cohort*",
-    theme: "professional",
+    theme: "bdd",
   },
   {
     number: "12",
     title: "C-Level Pitches",
     micro: "Presented insights to executives*",
-    theme: "professional",
+    theme: "bdd",
   },
   {
     number: "10",
     title: "Enterprises Served",
     micro: "Delivered analyses across diverse industries*",
-    theme: "professional",
+    theme: "enterprises",
   },
   {
     number: "#1",
@@ -35,14 +35,14 @@ const metrics = [
     number: "1",
     title: "Professional Internship",
     micro: "Applied skills in real-world corporate environment*",
-    theme: "internship",
+    theme: "bdd",
   },
 ];
 
 const themeColors = {
-  professional: "border-accent/60 hover:border-accent",
-  academic: "border-blue-500/60 hover:border-blue-500",
-  internship: "border-emerald-500/60 hover:border-emerald-500",
+  bdd: "bg-[#E6F0FA] border-[#E6F0FA] hover:border-accent/50",
+  enterprises: "bg-[#FFF5E6] border-[#FFF5E6] hover:border-accent/50",
+  academic: "bg-[#F2F2F2] border-[#F2F2F2] hover:border-accent/50",
 };
 
 const ImpactAtAGlance = () => {
