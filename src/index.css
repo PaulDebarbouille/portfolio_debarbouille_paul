@@ -171,14 +171,15 @@
   }
 
   .project-card {
-    @apply relative bg-card rounded-xl border overflow-hidden cursor-pointer transition-all duration-300;
+    @apply relative bg-card rounded-xl overflow-hidden cursor-pointer transition-all duration-300;
     box-shadow: var(--shadow-card);
+    border: 1px solid hsl(var(--aws-navy) / 0.15);
   }
 
   .project-card:hover {
     box-shadow: var(--shadow-elevated);
     transform: translateY(-4px);
-    border-color: hsl(var(--aws-orange) / 0.5);
+    border-color: hsl(var(--aws-orange) / 0.6);
   }
 
   .winner-badge {
