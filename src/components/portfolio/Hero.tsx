@@ -19,7 +19,7 @@ const Hero = () => {
           {/* Badge */}
           <div className="animate-fade-up">
             <span className="aws-badge text-sm">
-              Business Analyst Intern – AWS
+              Operational Business Analyst Intern
             </span>
           </div>
 
