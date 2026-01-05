@@ -17,6 +17,7 @@ export interface Project {
   data?: string;
   mission?: string;
   result?: string;
+  date?: string;
   htmlCardPath?: string; // Path to the HTML card for iframe display
 }
 
@@ -179,6 +180,7 @@ export const projects: Project[] = [
     title: "Inverter Performance Optimization",
     company: "Solarhona",
     sector: "Solar Energy",
+    date: "Oct 2024",
     isWinner: true,
     isInternship: false,
     isPrimary: false,
@@ -198,14 +200,13 @@ export const projects: Project[] = [
     principles: ["Dive Deep", "Deliver Results"],
     logo: "",
     data: "Analysis of inverter efficiency & optimization",
-    mission: "Solar Energy",
-    result: "1st position",
   },
   {
     id: "8",
     title: "Industrial Sensor Data Analysis",
     company: "VICAT",
     sector: "Heavy Industry",
+    date: "Nov 2024",
     isWinner: true,
     isInternship: false,
     isPrimary: false,
@@ -226,13 +227,13 @@ export const projects: Project[] = [
     logo: "",
     data: "Multi-objective analysis (throughput, cost, quality)",
     mission: "Recommendations by plant geography",
-    result: "1st position",
   },
   {
     id: "9",
     title: "Product Data Optimization",
     company: "Descours & Cabaud (Prolians)",
     sector: "B2B E-commerce",
+    date: "Dec 2024",
     isWinner: true,
     isInternship: false,
     isPrimary: false,
@@ -253,14 +254,14 @@ export const projects: Project[] = [
     principles: ["Dive Deep", "Insist on Highest Standards"],
     logo: "",
     data: "SEO & product catalog audit",
-    mission: "50% descriptions with errors, 30% images inconsistent",
-    result: "1st position",
+    mission: "50% of descriptions with errors classified by severity, 30% of images inconsistent",
   },
   {
     id: "10",
     title: "Resilient Supply Chain Strategy",
     company: "Volvo VCE",
     sector: "Industry & Logistics",
+    date: "Mar 2025",
     isWinner: true,
     isInternship: false,
     isPrimary: false,
@@ -282,13 +283,13 @@ export const projects: Project[] = [
     logo: "",
     data: "Macro/micro analysis & semiconductor dependencies",
     mission: "Strategic report + proposed AI architecture",
-    result: "1st position",
   },
   {
     id: "11",
     title: "Product Categorization & Space Allocation",
     company: "GL Events",
     sector: "Event Management",
+    date: "Apr 2025",
     isWinner: false,
     isInternship: false,
     isPrimary: false,
@@ -316,6 +317,7 @@ export const projects: Project[] = [
     title: "Photovoltaic Plant Performance Optimization",
     company: "Enerpacte",
     sector: "Energy",
+    date: "May 2025",
     isWinner: false,
     isInternship: false,
     isPrimary: false,
@@ -336,13 +338,14 @@ export const projects: Project[] = [
     logo: "",
     data: "120 datasets",
     mission: "Performance analysis & identification of underperforming plants",
-    result: "+40 GWh potential, €3.2M revenue",
+    result: "+40 GWh potential, €3.2M revenue potential",
   },
   {
     id: "13",
     title: "Customer Segmentation & Marketing Insights",
     company: "EBRA Events",
     sector: "Event Management",
+    date: "Oct 2025",
     isWinner: true,
     isInternship: false,
     isPrimary: false,
@@ -364,6 +367,5 @@ export const projects: Project[] = [
     logo: "",
     data: "Analysis of historical participants",
     mission: "3 personas identified, loyalty criteria, marketing recommendations",
-    result: "1st position",
   },
 ];
