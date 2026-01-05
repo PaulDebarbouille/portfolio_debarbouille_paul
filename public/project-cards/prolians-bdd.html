@@ -1,302 +1,409 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prolians - Segmentation Client Omnicanal</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background: #ffffff;
-      color: #1a1a1a;
-      line-height: 1.6;
-      padding: 32px;
-    }
-    .card {
-      max-width: 800px;
-      margin: 0 auto;
-    }
-    .header {
-      margin-bottom: 24px;
-    }
-    .badges {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 12px;
-    }
-    .badge-winner {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 4px 10px;
-      font-size: 11px;
-      font-weight: 600;
-      background: #ff9900;
-      color: white;
-      border-radius: 4px;
-    }
-    .category {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 11px;
-      font-weight: 500;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #666;
-      margin-bottom: 12px;
-    }
-    .impact-headline {
-      font-size: 28px;
-      font-weight: 700;
-      color: #1a1a1a;
-      margin-bottom: 8px;
-    }
-    .impact-highlight {
-      color: #ff9900;
-    }
-    .title {
-      font-size: 18px;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 16px;
-    }
-    .meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 16px;
-      font-size: 13px;
-      color: #666;
-      margin-bottom: 24px;
-    }
-    .tech-badges {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 24px;
-    }
-    .tech-badge {
-      display: inline-block;
-      padding: 4px 10px;
-      font-size: 11px;
-      font-weight: 500;
-      background: #f5f5f5;
-      border: 1px solid #e0e0e0;
-      border-radius: 4px;
-      color: #444;
-    }
-    .section {
-      margin-bottom: 24px;
-    }
-    .section-title {
-      font-size: 13px;
-      font-weight: 600;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      color: #2d5f8d;
-      margin-bottom: 12px;
-      padding-bottom: 8px;
-      border-bottom: 2px solid #2d5f8d;
-    }
-    .section-content {
-      font-size: 14px;
-      color: #444;
-    }
-    .section-content p {
-      margin-bottom: 12px;
-    }
-    .impact-box {
-      background: #f8f8f8;
-      border: 2px solid #ff9900;
-      border-radius: 4px;
-      padding: 20px;
-      margin-bottom: 24px;
-    }
-    .impact-box .section-title {
-      color: #ff9900;
-      border-bottom-color: #ff9900;
-    }
-    .result-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-    .result-icon {
-      flex-shrink: 0;
-      width: 20px;
-      height: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 600;
-      color: #ff9900;
-    }
-    .approach-list {
-      list-style: none;
-    }
-    .approach-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      margin-bottom: 12px;
-      font-size: 14px;
-      color: #444;
-    }
-    .approach-number {
-      flex-shrink: 0;
-      width: 24px;
-      height: 24px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #2d5f8d;
-      color: white;
-      border-radius: 50%;
-      font-size: 12px;
-      font-weight: 600;
-    }
-    .nda-notice {
-      text-align: center;
-      font-size: 12px;
-      font-style: italic;
-      color: #888;
-      margin-top: 32px;
-      padding-top: 16px;
-      border-top: 1px solid #e0e0e0;
-    }
-    .feedback-box {
-      background: #fffbf0;
-      border-left: 3px solid #ff9900;
-      padding: 16px;
-      margin-top: 24px;
-      font-size: 14px;
-      font-style: italic;
-      color: #555;
-    }
-    .feedback-title {
-      font-weight: 600;
-      font-style: normal;
-      margin-bottom: 8px;
-      color: #333;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projet Portfolio - Segmentation Client Prolians</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background: #fafafa;
+            padding: 40px 20px;
+            line-height: 1.6;
+            color: #1a1a1a;
+        }
+
+        .project-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border: 1px solid #e5e5e5;
+            overflow: hidden;
+        }
+
+        .header {
+            padding: 48px 48px 32px 48px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .category {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: #4a4a4a;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .category-icon {
+            width: 16px;
+            height: 16px;
+            opacity: 0.6;
+        }
+
+        .project-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+
+        .company-name {
+            color: #2d5f8d;
+        }
+
+        .impact-headline {
+            font-size: 32px;
+            font-weight: 700;
+            color: #2d5f8d;
+            margin-bottom: 24px;
+            line-height: 1.2;
+        }
+
+        .meta-info {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 24px;
+            font-size: 14px;
+            color: #4a4a4a;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tech-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 8px;
+        }
+
+        .badge {
+            background: white;
+            border: 1px solid #e5e5e5;
+            color: #4a4a4a;
+            padding: 4px 10px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+
+        .content {
+            padding: 48px;
+        }
+
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section:last-of-type {
+            margin-bottom: 0;
+        }
+
+        .section-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1a1a1a;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .section-title.highlight {
+            color: #ff9900;
+        }
+
+        .section-content {
+            color: #4a4a4a;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+
+        .section-content p {
+            margin-bottom: 12px;
+        }
+
+        .dataset-tag {
+            display: inline-block;
+            background: #f8f9fa;
+            border: 1px solid #e5e5e5;
+            padding: 8px 12px;
+            margin-top: 8px;
+            margin-right: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .results-box {
+            background: #f8f9fa;
+            border: 2px solid #ff9900;
+            padding: 24px;
+            margin-top: 16px;
+        }
+
+        .result-item {
+            margin-bottom: 20px;
+        }
+
+        .result-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .result-content strong {
+            display: block;
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 4px;
+        }
+
+        .result-content span {
+            font-size: 14px;
+            color: #4a4a4a;
+        }
+
+        .deliverable-note {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e5e5;
+            font-size: 14px;
+            color: #4a4a4a;
+        }
+
+        .deliverable-note strong {
+            color: #1a1a1a;
+        }
+
+        .feedback-box {
+            background: #fffbf0;
+            border-left: 3px solid #ff9900;
+            padding: 20px;
+            margin-top: 16px;
+            font-style: italic;
+            color: #4a4a4a;
+            line-height: 1.7;
+        }
+
+        .feedback-box p {
+            margin-bottom: 12px;
+        }
+
+        .feedback-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        .approach-list {
+            list-style: none;
+            margin-top: 12px;
+        }
+
+        .approach-list li {
+            margin-bottom: 16px;
+            padding-left: 24px;
+            position: relative;
+            color: #4a4a4a;
+            font-size: 15px;
+        }
+
+        .approach-list li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: #2d5f8d;
+            font-weight: 700;
+        }
+
+        .approach-list li strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .sub-list {
+            margin-top: 8px;
+            margin-left: 0;
+            list-style: none;
+        }
+
+        .sub-list li {
+            padding-left: 20px;
+            margin-bottom: 4px;
+            font-size: 14px;
+        }
+
+        .sub-list li::before {
+            content: "·";
+            font-weight: 700;
+        }
+
+        .footer {
+            padding: 24px 48px;
+            background: #f8f9fa;
+            border-top: 1px solid #e5e5e5;
+            text-align: center;
+        }
+
+        .nda-note {
+            font-size: 14px;
+            color: #4a4a4a;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .header {
+                padding: 32px 24px 24px 24px;
+            }
+
+            .impact-headline {
+                font-size: 24px;
+            }
+
+            .project-title {
+                font-size: 20px;
+            }
+
+            .content {
+                padding: 32px 24px;
+            }
+
+            .footer {
+                padding: 20px 24px;
+            }
+
+            .results-box {
+                padding: 20px;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="card">
-    <!-- Header -->
-    <div class="header">
-      <div class="badges">
-        <span class="badge-winner">🏆 Winner</span>
-      </div>
-      <div class="category">
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
-        </svg>
-        Distribution B2B
-      </div>
-      <div class="impact-headline">
-        <span class="impact-highlight">30M€</span> potentiel CA web identifié
-      </div>
-      <div class="title">Segmentation client omnicanal Prolians</div>
-    </div>
+    <div class="project-card">
+        <div class="header">
+            <div class="category">
+                <svg class="category-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                    <polyline points="9 22 9 12 15 12 15 22"/>
+                </svg>
+                E-commerce B2B
+            </div>
 
-    <!-- Meta -->
-    <div class="meta">
-      <div class="meta-item">3 semaines</div>
-      <div class="meta-item">Équipe de 3</div>
-    </div>
+            <h1 class="project-title">Segmentation client <span class="company-name">Prolians</span> (email marketing)</h1>
 
-    <!-- Tech Badges -->
-    <div class="tech-badges">
-      <span class="tech-badge">Excel</span>
-      <span class="tech-badge">Python (Pandas, Scikit-learn)</span>
-      <span class="tech-badge">PowerPoint</span>
-    </div>
+            <div class="impact-headline">30M€ potentiel CA web identifié</div>
 
-    <!-- Situation -->
-    <div class="section">
-      <div class="section-title">Situation</div>
-      <div class="section-content">
-        <p>Prolians, distributeur B2B de fournitures industrielles, observe que son canal omnicanal génère 40% du CA avec seulement 5% des clients. L'enjeu : identifier parmi les 18 000 clients offline lesquels présentent le plus fort potentiel de conversion vers le digital pour maximiser le CA web.</p>
-      </div>
-    </div>
+            <div class="meta-info">
+                <div class="meta-item">
+                    <span>📅</span>
+                    24 nov. - 12 déc. 2024 · 3 semaines
+                </div>
+                <div class="meta-item">
+                    <span>👥</span>
+                    Équipe de 3 · Leader & Business Analyst
+                </div>
+            </div>
 
-    <!-- Tâche -->
-    <div class="section">
-      <div class="section-title">Tâche</div>
-      <div class="section-content">
-        <p>Construire une méthodologie de scoring permettant d'identifier les clients offline les plus similaires aux clients omnicanaux performants, et définir un cluster prioritaire activable par une campagne marketing ciblée.</p>
-      </div>
-    </div>
-
-    <!-- Impact Box -->
-    <div class="impact-box">
-      <div class="section-title">Impact</div>
-      <div class="section-content">
-        <div class="result-item">
-          <span class="result-icon">💰</span>
-          <span><strong>30M€ potentiel CA web identifié</strong> — Si conversion totale du cluster prioritaire sur 1 an</span>
+            <div class="tech-badges">
+                <span class="badge">Excel (Analyse & Synthèse)</span>
+                <span class="badge">Python (Pandas, Sklearn, Seaborn)</span>
+                <span class="badge">PowerPoint</span>
+            </div>
         </div>
-        <div class="result-item">
-          <span class="result-icon">🎯</span>
-          <span><strong>Cluster de 500 clients ciblés</strong> — Représentant 100M€ CA sur 3 Mds€ CA offline total (ratio 50x supérieur au canal online)</span>
+
+        <div class="content">
+            <!-- Contexte -->
+            <div class="section">
+                <h2 class="section-title">Contexte</h2>
+                <div class="section-content">
+                    <p>Prolians (groupe Descours & Cabaud) lance son site e-commerce B2B et cherche à convertir ses clients offline vers l'omnicanal. L'analyse initiale révèle que 5% des clients omnicanaux génèrent 40% du CA, tandis que le canal offline représente 50 fois le CA online.</p>
+                    <p>L'enjeu : identifier quels clients offline cibler par email pour maximiser la conversion vers le web et développer le CA digital de manière stratégique.</p>
+                </div>
+            </div>
+
+            <!-- Mission -->
+            <div class="section">
+                <h2 class="section-title">Mission</h2>
+                <div class="section-content">
+                    <p>Analyser 4 datasets clients pour identifier un cluster activable par campagne emailing et maximiser le potentiel de conversion offline → omnicanal, avec pour objectif final d'accroître le CA de prolians.fr.</p>
+                    <span class="dataset-tag">Volume : 1M+ transactions · 77K+ lignes produits</span>
+                    <span class="dataset-tag">Scope : Oct 2024 - Oct 2025 · 5 départements France</span>
+                    <span class="dataset-tag">Type : Comportement achat & navigation web · Arborescence produits</span>
+                </div>
+            </div>
+
+            <!-- Impact -->
+            <div class="section">
+                <h2 class="section-title highlight">Impact</h2>
+                <div class="section-content">
+                    <div class="results-box">
+                        <div class="result-item">
+                            <div class="result-content">
+                                <strong>30M€ potentiel CA web sur 1 an</strong>
+                                <span>Si conversion complète du cluster identifié (hypothèse 30% CA online pour clients omnicanaux)</span>
+                            </div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-content">
+                                <strong>Cluster de 500 clients ciblé</strong>
+                                <span>Secteur artisanat · Compte en ligne actif · 100M€ CA (sur 3 Mds€ CA offline total) · Scoring de similarité optimisé</span>
+                            </div>
+                        </div>
+                        <div class="result-item">
+                            <div class="result-content">
+                                <strong>Stratégie de conversion activée</strong>
+                                <span>Campagne emailing en cours de déploiement · Méthodologie de scoring prédictif validée et réutilisable</span>
+                            </div>
+                        </div>
+                        <div class="deliverable-note">
+                            <strong>Livrables :</strong> Présentation exécutive · Score de similarité pour 18 000 clients offline · Liste priorisée des 500 clients cibles · Recommandations de contenu email
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Approche -->
+            <div class="section">
+                <h2 class="section-title">Approche</h2>
+                <div class="section-content">
+                    <p>Méthodologie data-driven en 6 étapes</p>
+                    <ul class="approach-list">
+                        <li><strong>Analyse stratégique des canaux :</strong> Cartographie CA par canal → Identification omnicanal comme canal star (40% CA avec seulement 5% des clients)</li>
+                        <li><strong>Segmentation RFM (K-means) :</strong> Clustering basé sur Récence, Fréquence, Montant → Distribution des clients à forte valeur concentrée en omnicanal (+15% vs online)</li>
+                        <li><strong>Décision stratégique :</strong> Arbitrage croissance organique online vs conversion offline → Focus conversion offline→omnicanal (50x CA offline vs online = levier maximal)</li>
+                        <li><strong>Profiling omnicanal :</strong> Création profil-type avec variables comportement d'achat et navigation site web pour définir le client omnicanal idéal</li>
+                        <li><strong>Scoring similarité cosinus :</strong> Calcul score pour 18 000 clients offline vs profil omnicanal type → Identification clients offline les plus proches du comportement omnicanal</li>
+                        <li><strong>Filtrage activable :</strong> Critères opérationnels (compte en ligne actif + secteur artisanat) + tri par CA décroissant → Cluster final de 500 clients priorisés</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Retour d'expérience -->
+            <div class="section">
+                <h2 class="section-title">Retour d'expérience</h2>
+                <div class="section-content">
+                    <div class="feedback-box">
+                        <p>🏆 Prix remporté lors de la présentation – Les équipes marketing et data de Prolians ont validé l'approche et la qualité de l'analyse. La campagne est actuellement en cours de déploiement sur le cluster identifié.</p>
+                        <p>Réflexion personnelle : Avec davantage de données comportementales (tracking web, interactions emails, historique 2-3 ans), nous aurions pu évoluer vers un modèle prédictif de propension à la conversion, permettant d'optimiser le ROI en ciblant les clients à fort potentiel tout en réduisant le cycle de décision. Le scoring cosinus reste cependant une première approche robuste et activable rapidement.</p>
+                        <p>Leadership & mentorat : J'ai travaillé avec des étudiants de première année moins à l'aise techniquement. Ce projet a été l'occasion de structurer un plan clair dès le début, d'expliquer chaque étape analytique et de tirer 100% de productivité de l'équipe. Un vrai exercice de mentorat que j'ai fortement apprécié.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="result-item">
-          <span class="result-icon">🚀</span>
-          <span><strong>Campagne en cours de déploiement</strong> — Méthodologie de scoring activée, liste priorisée livrée aux équipes marketing</span>
+
+        <div class="footer">
+            <p class="nda-note">* Projet confidentiel soumis à NDA – Chiffres modifiés · Analyses et slides non communicables</p>
         </div>
-      </div>
     </div>
-
-    <!-- Approche -->
-    <div class="section">
-      <div class="section-title">Approche & Méthodologie</div>
-      <div class="section-content">
-        <ul class="approach-list">
-          <li class="approach-item">
-            <span class="approach-number">1</span>
-            <span><strong>Analyse stratégique des canaux</strong> → Identification omnicanal comme canal star (40% CA avec 5% clients)</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">2</span>
-            <span><strong>Segmentation RFM (K-means)</strong> → Clients à forte valeur concentrés en omnicanal (+15% valeur vs online pure)</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">3</span>
-            <span><strong>Décision stratégique</strong> → Focus conversion offline→omnicanal plutôt que croissance organique online (50x plus de CA potentiel)</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">4</span>
-            <span><strong>Profiling omnicanal</strong> → Création profil-type avec variables comportement achat + visite site</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">5</span>
-            <span><strong>Scoring similarité cosinus</strong> → Identification 500 clients offline proches du profil omnicanal</span>
-          </li>
-          <li class="approach-item">
-            <span class="approach-number">6</span>
-            <span><strong>Filtrage activable</strong> → Critères : compte en ligne actif + secteur artisanat + CA décroissant</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- Feedback -->
-    <div class="feedback-box">
-      <div class="feedback-title">Retour d'expérience</div>
-      <p>Prix remporté et satisfaction des équipes Prolians. Ce projet m'a appris l'importance de l'arbitrage stratégique data-driven : plutôt qu'un modèle ML complexe, le scoring cosinus a permis de livrer une solution rapide et activable. J'ai également accompagné une équipe junior dans la structuration de leur démarche analytique.</p>
-    </div>
-
-    <!-- NDA Notice -->
-    <div class="nda-notice">
-      * Projet réalisé dans le cadre académique — Données confidentielles sous NDA
-    </div>
-  </div>
 </body>
 </html>
