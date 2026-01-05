@@ -10,7 +10,7 @@ const metrics = [
   {
     number: "8",
     title: "BDD Project Wins",
-    micro: "Top performance in cohort*",
+    micro: "Out of 12 projects*",
     theme: "bdd",
   },
   {
