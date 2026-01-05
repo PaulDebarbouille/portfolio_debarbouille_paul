@@ -16,7 +16,7 @@ const metrics = [
   {
     number: "12",
     title: "Team Leadership Roles",
-    micro: "Led cross-functional teams end-to-end*",
+    micro: "Led cross-functional teams of 3 end-to-end*",
     theme: "bdd",
   },
   {
