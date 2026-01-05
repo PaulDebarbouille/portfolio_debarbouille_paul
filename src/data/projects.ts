@@ -28,7 +28,7 @@ export const projects: Project[] = [
     company: "SEB",
     sector: "Consumer Goods",
     date: "Sep 2025",
-    isWinner: true,
+    isWinner: false,
     isInternship: false,
     isPrimary: true,
     logo: "/logos/seb.svg",
