@@ -28,7 +28,7 @@ const metrics = [
   {
     number: "1",
     title: "Professional Internship",
-    micro: "Applied skills in real-world corporate environment*",
+    micro: "Business Analyst D2C (Group SEB)",
     theme: "internship",
   },
   {
