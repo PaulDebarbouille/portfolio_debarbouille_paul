@@ -173,7 +173,11 @@
   .project-card {
     @apply relative bg-card rounded-xl overflow-hidden cursor-pointer transition-all duration-300;
     box-shadow: var(--shadow-card);
-    border: 1px solid hsl(var(--aws-navy) / 0.15);
+    border: 1px solid hsl(var(--border));
+  }
+
+  .dark .project-card {
+    border: 1px solid hsl(215 20% 40% / 0.4);
   }
 
   .project-card:hover {
