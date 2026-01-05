@@ -40,7 +40,7 @@ const metrics = [
 ];
 
 const themeColors = {
-  bdd: "border-[#3B82F6] hover:border-[#2563EB]",
+  bdd: "border-[#232F3E] hover:border-[#1a2330]",
   academic: "border-[#9CA3AF] hover:border-[#6B7280]",
   internship: "border-[#F59E0B] hover:border-[#D97706]",
 };
