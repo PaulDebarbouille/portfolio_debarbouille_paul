@@ -123,29 +123,29 @@ const ProjectsGrid = () => {
               return (
                 <div
                   key={project.id}
-                  className="bg-secondary/30 rounded-lg border border-border/50 p-3"
+                  className="bg-secondary/30 rounded-lg border border-border/50 p-3 relative"
                 >
-                  {/* Row 1: Company - Title (Date) + Winner Badge */}
-                  <div className="flex items-center justify-between gap-3 mb-2">
-                    <div className="flex items-center gap-2 flex-wrap">
-                      <span className="text-sm font-semibold text-foreground">
-                        {project.company}
-                      </span>
-                      <span className="text-muted-foreground">–</span>
-                      <span className="text-sm text-foreground/80">
-                        {project.title}
-                      </span>
-                      {project.date && (
-                        <span className="text-xs text-muted-foreground">
-                          ({project.date})
-                        </span>
-                      )}
+                  {/* Winner Badge - Top Right */}
+                  {project.isWinner && (
+                    <div className="absolute top-2 right-2 winner-badge flex items-center gap-1 text-xs">
+                      <Trophy className="h-3 w-3" />
+                      Winner
                     </div>
-                    {project.isWinner && (
-                      <div className="winner-badge flex items-center gap-1 flex-shrink-0">
-                        <Trophy className="h-3 w-3" />
-                        Winner
-                      </div>
+                  )}
+
+                  {/* Row 1: Company - Title (Date) */}
+                  <div className="flex items-center gap-2 flex-wrap mb-2 pr-16">
+                    <span className="text-sm font-semibold text-foreground">
+                      {project.company}
+                    </span>
+                    <span className="text-muted-foreground">–</span>
+                    <span className="text-sm text-foreground/80">
+                      {project.title}
+                    </span>
+                    {project.date && (
+                      <span className="text-xs text-muted-foreground">
+                        ({project.date})
+                      </span>
                     )}
                   </div>
 
