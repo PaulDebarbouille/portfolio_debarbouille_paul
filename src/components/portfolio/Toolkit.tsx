@@ -19,7 +19,9 @@ const categories = [
       { name: "Excel Avancé", icon: FileSpreadsheet },
       { name: "SQL", icon: Database },
       { name: "Python", icon: Code },
-      { name: "Data Cleaning", icon: BarChart3 },
+      { name: "QlikSense", icon: PieChart },
+      { name: "Google Analytics", icon: BarChart3 },
+      { name: "Problem Solving", icon: Code },
     ],
   },
   {
@@ -29,6 +31,7 @@ const categories = [
     skills: [
       { name: "Dashboards", icon: PieChart },
       { name: "KPI Frameworks", icon: BarChart3 },
+      { name: "Tableau", icon: PieChart },
       { name: "Business Cases", icon: FileText },
       { name: "ROI Analysis", icon: BarChart3 },
     ],
