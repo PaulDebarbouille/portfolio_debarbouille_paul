@@ -13,10 +13,10 @@ import {
 const categories = [
   {
     title: "Data Analysis",
-    description: "Exploration et analyse des données",
+    description: "Data exploration and insights",
     icon: Database,
     skills: [
-      { name: "Excel Avancé", icon: FileSpreadsheet },
+      { name: "Advanced Excel", icon: FileSpreadsheet },
       { name: "SQL", icon: Database },
       { name: "Python", icon: Code },
       { name: "QlikSense", icon: PieChart },
@@ -26,7 +26,7 @@ const categories = [
   },
   {
     title: "Decision Support",
-    description: "Aide à la prise de décision",
+    description: "Helping leaders make better decisions",
     icon: BarChart3,
     skills: [
       { name: "Dashboards", icon: PieChart },
@@ -38,7 +38,7 @@ const categories = [
   },
   {
     title: "Communication",
-    description: "Présentation et storytelling",
+    description: "Presenting insights clearly",
     icon: MessageSquare,
     skills: [
       { name: "Executive Summaries", icon: FileText },
@@ -63,7 +63,7 @@ const Toolkit = () => {
             My Toolkit
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            Outils et compétences organisés par usage business
+            Tools and skills organized by business use
           </p>
         </div>
 

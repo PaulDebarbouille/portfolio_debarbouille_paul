@@ -19,7 +19,7 @@ const ProjectModal = ({ project, open, onOpenChange }: ProjectModalProps) => {
           <button
             onClick={() => onOpenChange(false)}
             className="absolute right-4 top-4 z-10 rounded-full bg-background/80 backdrop-blur-sm p-2 hover:bg-background transition-colors"
-            aria-label="Fermer"
+            aria-label="Close"
           >
             <X className="h-4 w-4" />
           </button>
@@ -39,7 +39,7 @@ const ProjectModal = ({ project, open, onOpenChange }: ProjectModalProps) => {
       <DialogContent className="max-w-3xl max-h-[90vh] p-0 overflow-hidden">
         <div className="p-6 overflow-y-auto max-h-[90vh]">
           <div className="text-center py-12 text-muted-foreground">
-            <p>Contenu détaillé à venir pour ce projet.</p>
+            <p>Detailed content coming soon for this project.</p>
           </div>
         </div>
       </DialogContent>
