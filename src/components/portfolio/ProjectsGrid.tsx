@@ -28,7 +28,7 @@ const ProjectsGrid = () => {
             Key Projects
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            5 main projects + 7 other projects — Click each card to see full details
+            Explore 6 Main Projects and 7 More — Click a card for details
           </p>
         </div>
 
