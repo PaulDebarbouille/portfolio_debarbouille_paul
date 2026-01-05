@@ -32,7 +32,7 @@ const ProjectsGrid = () => {
             Key Projects
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            5 projets principaux + 7 projets secondaires — Cliquez sur chaque carte pour découvrir le détail STAR
+            5 main projects + 7 other projects — Click each card to see full details
           </p>
         </div>
 
@@ -58,7 +58,7 @@ const ProjectsGrid = () => {
                   {project.isInternship && (
                     <div className="flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-primary/10 text-primary">
                       <Briefcase className="h-3 w-3" />
-                      Stage
+                      Internship
                     </div>
                   )}
                 </div>
@@ -111,7 +111,7 @@ const ProjectsGrid = () => {
         {/* Secondary Projects - Detailed List */}
         <div className="mb-12">
           <h3 className="text-lg font-semibold text-foreground mb-4 text-center">
-            Autres projets
+            Other Projects
           </h3>
           <div className="space-y-2">
             {secondaryProjects.map((project) => {
