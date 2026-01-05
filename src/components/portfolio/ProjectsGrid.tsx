@@ -32,9 +32,9 @@ const ProjectsGrid = () => {
           </p>
         </div>
 
-        {/* Primary Projects Grid - 5 cards */}
+        {/* Primary Projects Grid - 6 cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
-          {primaryProjects.slice(0, 5).map((project, index) => (
+          {primaryProjects.slice(0, 6).map((project, index) => (
             <div
               key={project.id}
               onClick={() => handleProjectClick(project)}
