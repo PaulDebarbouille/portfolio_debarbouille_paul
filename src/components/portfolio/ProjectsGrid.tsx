@@ -39,32 +39,45 @@ const ProjectsGrid = () => {
         {/* Primary Projects Grid - 5 cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
           {primaryProjects.slice(0, 5).map((project, index) => {
+            const SectorIcon = getSectorIcon(project.sector);
             return (
               <div
                 key={project.id}
                 onClick={() => handleProjectClick(project)}
-                className="project-card p-4 animate-fade-up relative"
+                className="project-card p-4 animate-fade-up"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                {/* Winner Badge - Top Right */}
-                {project.isWinner && (
-                  <div className="absolute top-3 right-3 winner-badge flex items-center gap-1 text-xs">
-                    <Trophy className="h-3 w-3" />
-                    Winner
-                  </div>
-                )}
+                {/* Badges */}
+                <div className="flex gap-2">
+                  {project.isWinner && (
+                    <div className="winner-badge flex items-center gap-1">
+                      <Trophy className="h-3 w-3" />
+                      Winner
+                    </div>
+                  )}
+                  {project.isInternship && (
+                    <div className="flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-primary/10 text-primary">
+                      <Briefcase className="h-3 w-3" />
+                      Stage
+                    </div>
+                  )}
+                </div>
 
                 {/* Content */}
-                <div className="space-y-3 pr-16">
-                  {/* Sector - Company */}
-                  <div>
-                    <span className="text-xs text-muted-foreground">
-                      {project.sector}
-                    </span>
-                    <span className="text-muted-foreground mx-1">–</span>
-                    <span className="text-sm font-semibold text-accent">
-                      {project.company}
-                    </span>
+                <div className="space-y-3">
+                  {/* Logo + Company */}
+                  <div className="flex items-center gap-3">
+                    <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
+                      <SectorIcon className="h-4 w-4 text-muted-foreground" />
+                    </div>
+                    <div>
+                      <span className="text-xs text-muted-foreground uppercase tracking-wider">
+                        {project.sector}
+                      </span>
+                      <h3 className="text-sm font-semibold text-accent leading-tight">
+                        {project.company}
+                      </h3>
+                    </div>
                   </div>
 
                   {/* Title */}
@@ -73,15 +86,21 @@ const ProjectsGrid = () => {
                   </h4>
 
                   {/* Result in Orange */}
-                  <p className="text-sm text-primary font-medium">
-                    <span className="text-muted-foreground font-normal">Result: </span>
-                    {project.result}
+                  <p className="text-sm">
+                    <span className="text-muted-foreground">Result: </span>
+                    <span className="text-primary font-medium">{project.result}</span>
                   </p>
 
-                  {/* Tools + Winner */}
-                  <div className="flex flex-wrap items-center gap-1 text-xs text-muted-foreground">
-                    <span>Tools: </span>
-                    <span className="text-foreground/80">{project.tools.join(", ")}</span>
+                  {/* Tools Preview */}
+                  <div className="flex flex-wrap gap-1">
+                    {project.tools.map((tool) => (
+                      <span
+                        key={tool}
+                        className="text-xs px-2 py-0.5 rounded bg-secondary text-secondary-foreground"
+                      >
+                        {tool}
+                      </span>
+                    ))}
                   </div>
                 </div>
               </div>
