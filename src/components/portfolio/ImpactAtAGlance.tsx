@@ -40,9 +40,9 @@ const metrics = [
 ];
 
 const themeColors = {
-  bdd: "border-[#E6F0FA] hover:border-[#c4daf3]",
-  academic: "border-[#F2F2F2] hover:border-[#d9d9d9]",
-  internship: "border-[#FFF5E6] hover:border-[#ffe4c4]",
+  bdd: "border-[#3B82F6] hover:border-[#2563EB]",
+  academic: "border-[#9CA3AF] hover:border-[#6B7280]",
+  internship: "border-[#F59E0B] hover:border-[#D97706]",
 };
 
 const ImpactAtAGlance = () => {
