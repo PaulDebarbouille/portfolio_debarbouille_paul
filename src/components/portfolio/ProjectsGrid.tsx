@@ -29,55 +29,42 @@ const ProjectsGrid = () => {
         {/* Section Header */}
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Use Cases
+            Key Projects
           </h2>
           <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
-            6 projets principaux + 7 projets secondaires — Cliquez sur chaque carte pour découvrir le détail STAR
+            5 projets principaux + 7 projets secondaires — Cliquez sur chaque carte pour découvrir le détail STAR
           </p>
         </div>
 
-        {/* Primary Projects Grid - 6 cards */}
+        {/* Primary Projects Grid - 5 cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
-          {primaryProjects.map((project, index) => {
-            const SectorIcon = getSectorIcon(project.sector);
+          {primaryProjects.slice(0, 5).map((project, index) => {
             return (
               <div
                 key={project.id}
                 onClick={() => handleProjectClick(project)}
-                className="project-card p-4 animate-fade-up"
+                className="project-card p-4 animate-fade-up relative"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                {/* Badges */}
-                <div className="flex gap-2">
-                  {project.isWinner && (
-                    <div className="winner-badge flex items-center gap-1">
-                      <Trophy className="h-3 w-3" />
-                      Winner
-                    </div>
-                  )}
-                  {project.isInternship && (
-                    <div className="flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-primary/10 text-primary">
-                      <Briefcase className="h-3 w-3" />
-                      Stage
-                    </div>
-                  )}
-                </div>
+                {/* Winner Badge - Top Right */}
+                {project.isWinner && (
+                  <div className="absolute top-3 right-3 winner-badge flex items-center gap-1 text-xs">
+                    <Trophy className="h-3 w-3" />
+                    Winner
+                  </div>
+                )}
 
                 {/* Content */}
-                <div className="space-y-3">
-                  {/* Logo + Company */}
-                  <div className="flex items-center gap-3">
-                    <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center flex-shrink-0">
-                      <SectorIcon className="h-4 w-4 text-muted-foreground" />
-                    </div>
-                    <div>
-                      <span className="text-xs text-muted-foreground uppercase tracking-wider">
-                        {project.sector}
-                      </span>
-                      <h3 className="text-sm font-semibold text-accent leading-tight">
-                        {project.company}
-                      </h3>
-                    </div>
+                <div className="space-y-3 pr-16">
+                  {/* Sector - Company */}
+                  <div>
+                    <span className="text-xs text-muted-foreground">
+                      {project.sector}
+                    </span>
+                    <span className="text-muted-foreground mx-1">–</span>
+                    <span className="text-sm font-semibold text-accent">
+                      {project.company}
+                    </span>
                   </div>
 
                   {/* Title */}
@@ -85,26 +72,16 @@ const ProjectsGrid = () => {
                     {project.title}
                   </h4>
 
-                  {/* Short Description */}
-                  <p className="text-sm text-muted-foreground line-clamp-2">
-                    {project.shortDescription}
+                  {/* Result in Orange */}
+                  <p className="text-sm text-primary font-medium">
+                    <span className="text-muted-foreground font-normal">Result: </span>
+                    {project.result}
                   </p>
 
-                  {/* Tools Preview */}
-                  <div className="flex flex-wrap gap-1">
-                    {project.tools.slice(0, 3).map((tool) => (
-                      <span
-                        key={tool}
-                        className="text-xs px-2 py-0.5 rounded bg-secondary text-secondary-foreground"
-                      >
-                        {tool}
-                      </span>
-                    ))}
-                    {project.tools.length > 3 && (
-                      <span className="text-xs px-2 py-0.5 rounded bg-secondary text-muted-foreground">
-                        +{project.tools.length - 3}
-                      </span>
-                    )}
+                  {/* Tools + Winner */}
+                  <div className="flex flex-wrap items-center gap-1 text-xs text-muted-foreground">
+                    <span>Tools: </span>
+                    <span className="text-foreground/80">{project.tools.join(", ")}</span>
                   </div>
                 </div>
               </div>
