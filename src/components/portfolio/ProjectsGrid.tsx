@@ -112,51 +112,65 @@ const ProjectsGrid = () => {
           })}
         </div>
 
-        {/* Secondary Projects - Compact List */}
+        {/* Secondary Projects - Detailed List */}
         <div className="mb-12">
           <h3 className="text-lg font-semibold text-foreground mb-4 text-center">
             Autres projets
           </h3>
-          <div className="bg-secondary/30 rounded-xl border border-border/50 divide-y divide-border/30">
+          <div className="space-y-2">
             {secondaryProjects.map((project) => {
               const SectorIcon = getSectorIcon(project.sector);
               return (
                 <div
                   key={project.id}
-                  className="flex flex-wrap items-center gap-x-4 gap-y-1 px-4 py-2.5"
+                  className="bg-secondary/30 rounded-lg border border-border/50 p-3"
                 >
-                  {/* Logo & Company */}
-                  <div className="flex items-center gap-2 w-48 flex-shrink-0">
-                    <div className="w-6 h-6 rounded bg-secondary flex items-center justify-center flex-shrink-0">
-                      <SectorIcon className="h-3 w-3 text-muted-foreground" />
+                  {/* Row 1: Company - Title (Date) + Winner Badge */}
+                  <div className="flex items-center justify-between gap-3 mb-2">
+                    <div className="flex items-center gap-2 flex-wrap">
+                      <span className="text-sm font-semibold text-foreground">
+                        {project.company}
+                      </span>
+                      <span className="text-muted-foreground">–</span>
+                      <span className="text-sm text-foreground/80">
+                        {project.title}
+                      </span>
+                      {project.date && (
+                        <span className="text-xs text-muted-foreground">
+                          ({project.date})
+                        </span>
+                      )}
                     </div>
-                    <span className="text-sm font-medium text-foreground">
-                      {project.company}
-                    </span>
+                    {project.isWinner && (
+                      <div className="winner-badge flex items-center gap-1 flex-shrink-0">
+                        <Trophy className="h-3 w-3" />
+                        Winner
+                      </div>
+                    )}
                   </div>
 
-                  {/* Sector */}
-                  <span className="text-xs text-muted-foreground w-28 flex-shrink-0 hidden md:block">
-                    {project.sector}
-                  </span>
-
-                  {/* Mission - flexible */}
-                  <span className="text-xs text-muted-foreground flex-1 min-w-0">
-                    {project.mission || project.title}
-                  </span>
-
-                  {/* Result */}
-                  <span className="text-xs text-accent font-medium flex-shrink-0">
-                    {project.result}
-                  </span>
-
-                  {/* Winner Badge */}
-                  {project.isWinner && (
-                    <div className="winner-badge flex items-center gap-1 text-[10px] px-1.5 py-0.5">
-                      <Trophy className="h-2.5 w-2.5" />
-                      Winner
+                  {/* Row 2: Logo | Sector | Data | Mission | Result */}
+                  <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-muted-foreground">
+                    <div className="w-5 h-5 rounded bg-secondary flex items-center justify-center flex-shrink-0">
+                      <SectorIcon className="h-3 w-3 text-muted-foreground" />
                     </div>
-                  )}
+                    <span className="text-border">|</span>
+                    <span>{project.sector}</span>
+                    <span className="text-border">|</span>
+                    <span>{project.data}</span>
+                    {project.mission && (
+                      <>
+                        <span className="text-border">|</span>
+                        <span>{project.mission}</span>
+                      </>
+                    )}
+                    {project.result && (
+                      <>
+                        <span className="text-border">|</span>
+                        <span className="text-accent font-medium">{project.result}</span>
+                      </>
+                    )}
+                  </div>
                 </div>
               );
             })}
