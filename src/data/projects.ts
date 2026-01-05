@@ -330,7 +330,7 @@ export const projects: Project[] = [
     logo: "/logos/enerpacte.png",
     data: "120 datasets",
     mission: "Performance analysis of underperforming plants",
-    result: "Found underperforming plants, +40 GWh, €3.2M",
+    result: "Identified €3.2M additional revenue through performance optimization",
   },
   {
     id: "13",
