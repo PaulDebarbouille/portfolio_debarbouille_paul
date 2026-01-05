@@ -47,13 +47,21 @@ const ProjectsGrid = () => {
                 className="project-card p-4 animate-fade-up"
                 style={{ animationDelay: `${index * 0.05}s` }}
               >
-                {/* Winner Badge */}
-                {project.isWinner && (
-                  <div className="winner-badge flex items-center gap-1">
-                    <Trophy className="h-3 w-3" />
-                    Winner
-                  </div>
-                )}
+                {/* Badges */}
+                <div className="flex gap-2">
+                  {project.isWinner && (
+                    <div className="winner-badge flex items-center gap-1">
+                      <Trophy className="h-3 w-3" />
+                      Winner
+                    </div>
+                  )}
+                  {project.isInternship && (
+                    <div className="flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium bg-primary/10 text-primary">
+                      <Briefcase className="h-3 w-3" />
+                      Stage
+                    </div>
+                  )}
+                </div>
 
                 {/* Content */}
                 <div className="space-y-3">
