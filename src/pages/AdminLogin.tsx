@@ -78,8 +78,17 @@ const AdminLogin = () => {
               required
             />
             {error && <p className="text-sm text-destructive">{error}</p>}
+            {success && <p className="text-sm text-green-600">{success}</p>}
             <Button type="submit" className="w-full bg-accent text-accent-foreground hover:bg-accent/90" disabled={loading}>
-              {loading ? "Connexion..." : "Se connecter"}
+              {loading ? (isSignup ? "Création..." : "Connexion...") : (isSignup ? "Créer le compte" : "Se connecter")}
+            </Button>
+            <Button
+              type="button"
+              variant="link"
+              className="w-full text-sm text-muted-foreground"
+              onClick={() => { setIsSignup(!isSignup); setError(""); setSuccess(""); }}
+            >
+              {isSignup ? "Déjà un compte ? Se connecter" : "Créer un compte admin"}
             </Button>
           </form>
 
