@@ -3,19 +3,38 @@ import { useNavigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Lock, ArrowLeft } from "lucide-react";
+import { Lock, ArrowLeft, UserPlus } from "lucide-react";
 
 const AdminLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [isSignup, setIsSignup] = useState(false);
+  const [success, setSuccess] = useState("");
   const navigate = useNavigate();
 
   const handleLogin = async (e: React.FormEvent) => {
     e.preventDefault();
     setLoading(true);
     setError("");
+    setSuccess("");
+
+    if (isSignup) {
+      const { error: signUpError } = await supabase.auth.signUp({
+        email,
+        password,
+      });
+      if (signUpError) {
+        setError(signUpError.message);
+        setLoading(false);
+        return;
+      }
+      setSuccess("Compte créé ! Vous pouvez maintenant vous connecter.");
+      setIsSignup(false);
+      setLoading(false);
+      return;
+    }
 
     const { error: authError } = await supabase.auth.signInWithPassword({
       email,
