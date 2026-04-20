@@ -14,28 +14,10 @@ const metrics = [
     theme: "bdd",
   },
   {
-    number: "12",
-    title: "Team Leadership Roles",
-    micro: "Led cross-functional teams of 3 end-to-end*",
+    number: "+1M€",
+    title: "Potential Identified",
+    micro: "Total business potential identified across projects*",
     theme: "bdd",
-  },
-  {
-    number: "10",
-    title: "Enterprises Served",
-    micro: "Delivered analyses across diverse industries*",
-    theme: "bdd",
-  },
-  {
-    number: "1",
-    title: "Professional Internship",
-    micro: "Business Analyst Online D2C (Group SEB)",
-    theme: "internship",
-  },
-  {
-    number: "#1",
-    title: "Academic Ranking",
-    micro: "Ranked #1 academically*",
-    theme: "academic",
   },
 ];
 
